@@ -1,0 +1,2 @@
+# PJ_HokkaidoBeefAndPork2025
+北海道和牛と豚を輸出するプロジェクトです
