@@ -1,0 +1,88 @@
+/* _common_parts/01_title_slide.css */
+/* スタイル名: タイトルスライド コンテンツ用スタイル */
+/* 対応HTML: 01_title_slide.html */
+
+/*
+  このCSSは、01_title_slide.html のHTML構造に対応する基本的なスタイルを提供します。
+  通常、このファイルはプロジェクトのメインCSS (例: css/style.css) から @import されます。
+  親要素に .slide 及び .slide-cover クラス、さらに .slide-content クラスを持つ要素が
+  存在することを前提としたスタイル指定が含まれる場合があります。
+*/
+
+
+/* --- タイトルスライド内の要素の基本的な配置やスタイル --- */
+
+/* ロゴ (.cover-logo) のスタイル例 */
+.cover-logo {
+    display: block; /* 画像をブロック要素として扱う */
+    max-width: 150px; /* ロゴの最大幅 (適宜調整) */
+    height: auto; /* 高さは自動調整でアスペクト比を維持 */
+    margin: 0 auto 20px auto; /* 上0, 左右auto (中央揃え), 下20pxの余白 */
+}
+
+/* メインタイトル (.cover-title) のスタイル例 */
+.cover-title {
+    font-size: 2.8em; /* 親要素のフォントサイズに対する相対的な大きさ (適宜調整) */
+    /* color: #333; */ /* 色は親の .slide-cover や基本スタイルで定義されることを想定 */
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center; /* 中央揃え */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+/* サブタイトル (.cover-subtitle) のスタイル例 */
+.cover-subtitle {
+    font-size: 1.4em; /* 適宜調整 */
+    /* color: #555; */
+    line-height: 1.5;
+    text-align: center; /* 中央揃え */
+    margin-bottom: 1.5em;
+    max-width: 80%; /* 長文の場合、中央揃えでも読みやすいように幅を制限 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 発表者情報エリア (.presenter-info) のスタイル例 */
+.presenter-info {
+    font-size: 1em; /* 適宜調整 */
+    /* color: #666; */
+    text-align: center; /* 中央揃え */
+    margin-top: 30px; /* 上の要素との間に少しスペース */
+}
+
+/* 発表者/会社名 (.presenter-company) のスタイル例 */
+.presenter-info .presenter-company {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+}
+
+/* 日付 (.date) のスタイル例 */
+.presenter-info .date {
+    font-size: 0.9em;
+}
+
+
+/* --- 親要素が .slide-cover の場合、より特化したスタイル (任意) --- */
+/*
+.slide-cover .cover-title {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.slide-cover .cover-subtitle {
+    color: rgba(255,255,255,0.9);
+}
+.slide-cover .presenter-info {
+    color: rgba(255,255,255,0.8);
+}
+*/
+
+/*
+  注意:
+  - 上記のスタイルはあくまで一例です。実際のデザインに合わせて調整してください。
+  - 色指定はコメントアウトしています。多くの場合、親要素の .slide-cover や
+    プロジェクト全体のテーマカラーで制御されるか、あるいはここで明示的に指定します。
+  - フォントサイズや余白は、全体のバランスを見て調整が必要です。
+  - 印刷時のスタイル調整は、主に css/print.css の @media print ブロックで行います。
+    このファイルでは、画面表示と印刷表示で共通して問題ない基本的なスタイルを記述します。
+*/

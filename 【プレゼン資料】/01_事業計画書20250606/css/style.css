@@ -4,7 +4,9 @@
 /* 各共通スライドパーツのCSS */
 @import url("01_title_slide.css");
 @import url("02_agenda_slide.css");
-@import url("03_company_profile_slide.css");
+@import url("02_exective_sumary-1-1.css");
+@import url("03_project_purpose.css");
+/* @import url("03_company_profile_slide.css");
 @import url("04_mission_vision_slide.css");
 @import url("05_problem_statement_slide.css");
 @import url("06_solution_overview_slide.css");
@@ -16,7 +18,7 @@
 @import url("12_call_to_action_slide.css");
 @import url("13_thank_you_slide.css");
 @import url("14_section_divider_slide.css");
-@import url("15_image_full_bleed_slide.css");
+@import url("15_image_full_bleed_slide.css"); */
 /* ...他の共通パーツCSS... */
 
 

@@ -1,0 +1,116 @@
+/* _common_parts/02_exective_summary-1-1.css */
+/* スタイル名: エグゼクティブサマリー コンテンツ用スタイル */
+
+/* --- エグゼクティブサマリースライド内の要素の基本的な配置やスタイル --- */
+
+.slide-executive-summary-1-1 .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* コンテンツを中央揃え */
+    justify-content: center; /* 垂直方向も中央に（スライドの高さによる） */
+    padding: 2em; /* スライド全体のパディング */
+    text-align: center; /* 基本的にテキストは中央揃え */
+}
+
+.summary-main-title {
+    font-size: 2.1em; /* メインタイトルは大きく */
+    font-weight: bold;
+    color: #333; /* 適宜調整 */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.summary-subtitle {
+    font-size: 1.4em; /* サブタイトルも強調 */
+    font-weight: bold;
+    color: #007bff; /* 例: プライマリーカラー */
+    margin-bottom: 2em; /* グリッドとの間に余白 */
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #eee; /* タイトル下に薄い区切り線 (任意) */
+    max-width: 80%; /* サブタイトルの幅を少し抑える */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- 4つのポイントを配置するグリッド --- */
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 横に2列 */
+    grid-template-rows: repeat(2, auto);    /* 縦に2行、高さはコンテンツに合わせる */
+    gap: 2em; /* 各アイテム間の余白 */
+    width: 100%; /* スライドコンテンツ幅いっぱいに */
+    max-width: 900px; /* グリッドの最大幅（適宜調整） */
+    margin-top: 1em;
+}
+
+.summary-grid-item {
+    background-color: #f9f9f9; /* 各アイテムの背景色（任意） */
+    padding: 1.5em;
+    border-radius: 8px; /* 角を丸くする（任意） */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影（任意） */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* アイテム内の要素を中央揃え */
+    text-align: center; /* アイテム内のテキストも中央揃え */
+}
+
+.item-icon {
+    font-size: 2.5em; /* アイコンのサイズ */
+    color: #007bff; /* アイコンの色 */
+    margin-bottom: 0.5em;
+    /* ここにSVGやFontAwesomeのスタイルを指定 */
+}
+
+.item-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.item-text {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+}
+
+.item-keywords {
+    font-size: 0.9em;
+    color: #777;
+    font-style: italic;
+}
+
+/* --- レスポンシブ対応（画面幅が狭い場合、1列にする例） --- */
+@media (max-width: 768px) {
+    .summary-grid {
+        grid-template-columns: 1fr; /* 1列にする */
+    }
+    .summary-main-title {
+        font-size: 2em;
+    }
+    .summary-subtitle {
+        font-size: 1.5em;
+    }
+    .item-title {
+        font-size: 1.2em;
+    }
+}
+
+
+/* 既存の .exective-summary-title や .exective-summary-list などのスタイルは、
+   今回のレイアウトでは直接使用しないため、コメントアウトするか、
+   別のスライドで使用する場合は残しておいてください。
+   もし流用する場合は、クラス名を合わせるなどの調整が必要です。
+*/
+
+/*
+  注意:
+  - 上記のCSSは一例です。具体的なアイコンの実装（SVG、画像、フォントアイコン）や、
+    配色、フォントファミリーなどはプロジェクトのデザインに合わせて調整してください。
+  - `gap` プロパティは比較的新しいCSSですが、主要なモダンブラウザではサポートされています。
+    古いブラウザ対応が必要な場合は、marginなどで調整する必要があります。
+  - アイコンのプレースホルダーとして `ICON1` としていますが、実際には`<img src="...">` や
+    FontAwesomeの `<i class="fas fa-..."></i>` などに置き換えてください。
+*/
