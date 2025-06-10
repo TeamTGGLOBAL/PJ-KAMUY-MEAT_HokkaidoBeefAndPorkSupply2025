@@ -1,0 +1,82 @@
+/* _common_parts/02_agenda_slide.css */
+/* スタイル名: アジェンダ/目次スライド コンテンツ用スタイル */
+/* 対応HTML: 02_agenda_slide.html */
+
+/*
+  このCSSは、02_agenda_slide.html のHTML構造に対応する基本的なスタイルを提供します。
+  通常、このファイルはプロジェクトのメインCSS (例: css/style.css) から @import されます。
+  親要素に .slide 及び .slide-agenda クラス、さらに .slide-content クラスを持つ要素が
+  存在することを前提としたスタイル指定が含まれる場合があります。
+*/
+
+
+/* --- アジェンダスライド内の要素の基本的な配置やスタイル --- */
+
+/* アジェンダスライドのメインタイトル (.agenda-title) のスタイル例 */
+.agenda-title {
+    font-size: 2.2em; /* 親要素のフォントサイズに対する相対的な大きさ (適宜調整) */
+    /* color: #333; */ /* 色は親の .slide-agenda や基本スタイルで定義されることを想定 */
+    font-weight: bold;
+    text-align: center; /* 中央揃え、または左揃えなどお好みで */
+    margin-top: 0;
+    margin-bottom: 1.5em; /* リストとの間に余白 */
+    padding-bottom: 0.5em; /* タイトル下に区切り線を入れる場合のスペース */
+    border-bottom: 2px solid #eee; /* タイトル下に薄い区切り線 (任意) */
+}
+
+/* アジェンダリスト全体 (.agenda-list) のスタイル例 */
+.agenda-list {
+    list-style-type: none; /* デフォルトの黒丸を消す (もし番号付きリストなら list-style-type: decimal;) */
+    padding-left: 0; /* 左側のパディングをリセット */
+    margin-left: auto;  /* リストを中央に寄せる (幅を指定した場合) */
+    margin-right: auto; /* リストを中央に寄せる (幅を指定した場合) */
+    max-width: 90%;    /* スライド幅に対するリストの最大幅 */
+}
+
+/* アジェンダの各項目 (.agenda-item) のスタイル例 */
+.agenda-item {
+    font-size: 1.2em; /* 適宜調整 */
+    /* color: #444; */
+    line-height: 1.6;
+    padding: 0.5em 0; /* 各項目の上下に少しパディング */
+    border-bottom: 1px dotted #ddd; /* 各項目の間に薄い点線 (任意) */
+}
+
+.agenda-item:last-child {
+    border-bottom: none; /* 最後の項目の下の線は消す */
+}
+
+/* もし番号付きリスト (ol) を使う場合、カウンターを使ったカスタム番号付けの例 */
+/*
+.agenda-list {
+    list-style-type: none;
+    counter-reset: agenda-counter;
+    padding-left: 2em;
+}
+.agenda-item::before {
+    counter-increment: agenda-counter;
+    content: counter(agenda-counter) ". ";
+    font-weight: bold;
+    margin-right: 0.5em;
+    color: #007bff; // 番号の色 (適宜変更)
+}
+*/
+
+
+/* --- 親要素が .slide-agenda の場合、より特化したスタイル (任意) --- */
+/*
+.slide-agenda .agenda-title {
+    color: var(--color-primary); // プロジェクトのプライマリカラーなど
+}
+*/
+
+/*
+  注意:
+  - 上記のスタイルはあくまで一例です。実際のデザインに合わせて調整してください。
+  - 色指定はコメントアウトしています。多くの場合、親要素の .slide-agenda や
+    プロジェクト全体のテーマカラーで制御されるか、あるいはここで明示的に指定します。
+  - フォントサイズや余白、リストのスタイル（マーカー、区切り線など）は、
+    全体のバランスを見て調整が必要です。
+  - 印刷時のスタイル調整は、主に css/print.css の @media print ブロックで行います。
+    このファイルでは、画面表示と印刷表示で共通して問題ない基本的なスタイルを記述します。
+*/

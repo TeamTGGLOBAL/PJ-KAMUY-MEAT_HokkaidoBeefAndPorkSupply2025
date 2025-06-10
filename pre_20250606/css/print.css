@@ -1,0 +1,78 @@
+/* style_print.css */
+
+:root {
+    /* Print variable overrides (元々あったもの) */
+    --color-text-wp: var(--color-black-wp); /* style.cssにある */
+    --color-heading-wp: var(--color-black-wp);
+    --logo-image-path: url('../_common_assets/images/common/logo/logo-small.png'); 
+
+    /* もし style.css で定義されている変数をここで上書きまたは定義するなら */
+    --color-black-wp: #000000; /* 例: 直接定義 */
+    --color-white-wp: #ffffff; /* 例: 直接定義 */
+    --print-header-height: 1.2cm; /* 例: 直接定義 */
+    --print-footer-height: 0.8cm; /* 例: 直接定義 */
+    --print-v-margin: 0.6cm; /* 例: 直接定義 */
+}
+
+
+@page {
+    size: A4 landscape; /* A4横向き */
+    margin: 1cm; /* ★style_wp.css と同じ値にしてみる★ */
+
+    @top-left { content: ""; }
+    @top-center { content: ""; }
+    @top-right { content: var(--logo-image-path);
+        margin-right: 1cm; /* 右端からの余白 */
+            }
+    @bottom-left { content: ""; }
+    @bottom-center { content: ""; }
+    @bottom-right { content: ""; }
+}
+
+/* ================================================== */
+/* ================= Print Styles =================== */
+/* ================================================== */
+@media print {
+
+
+    /* --- Print Header/Footer Containers --- */
+    .print-header,
+    .print-footer {
+        display: flex !important;
+        align-items: center;
+        position: absolute !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 100 !important;
+    }
+    .print-header {
+        top: 0 !important;
+        height: var(--print-header-height) !important;
+        justify-content: flex-end !important;
+        padding: 0 0.5cm !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .print-footer {
+        bottom: 0 !important;
+        height: var(--print-footer-height) !important;
+        justify-content: space-between !important;
+        padding: 0 0 !important;
+        background-color: #333 !important;
+        color: var(--color-white-wp) !important;
+        font-size: 10pt !important;
+        border: none !important;
+    }
+
+
+    /* --- Print Slide Adjustments --- */
+    .slide {
+        padding-top: calc(var(--print-header-height) + var(--print-v-margin)) !important;
+        padding-bottom: calc(var(--print-footer-height) + var(--print-v-margin)) !important;
+        overflow: visible !important; 
+        position: relative !important;
+    }
+
+
+} /* End of @media print */

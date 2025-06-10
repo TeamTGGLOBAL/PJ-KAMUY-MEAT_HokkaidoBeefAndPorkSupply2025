@@ -1,0 +1,183 @@
+/* _new_section_styles/project_purpose.css など新しいファイルを作成するか、既存の共通CSSに追加 */
+
+/* スライド共通の基本スタイル（既存の .slide を継承または調整） */
+.slide-project-purpose {
+    padding: 40px 5%; /* 上下左右の余白 */
+    text-align: center; /* 基本は中央揃えにするが、セクションごとに調整 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 縦方向中央揃え */
+    min-height: 80vh; /* スライドの高さを確保 */
+}
+
+.slide-project-purpose .slide-content {
+    max-width: 900px; /* コンテンツの最大幅 */
+    margin: 0 auto; /* 中央揃え */
+}
+
+/* ヒーローセクション (スライド1枚目) */
+.purpose-hero-section {
+    animation: fadeInSlide 1s ease-out; /* フェードインアニメーション */
+}
+
+.purpose-main-title {
+    font-size: 2.8em; /* メインタイトル */
+    font-weight: bold;
+    color: var(--color-primary); /* テーマのプライマリカラー */
+    margin-bottom: 0.5em;
+}
+
+.purpose-key-message {
+    font-size: 2.2em; /* インパクトのあるキーメッセージ */
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.purpose-key-message .highlight {
+    color: var(--color-accent); /* 強調色 */
+    font-weight: bold;
+    /* text-decoration: underline; */ /* 下線なども検討 */
+}
+
+.purpose-intro-text {
+    font-size: 1.2em;
+    line-height: 1.7;
+    text-align: left; /* 導入文は左揃えの方が見やすい場合も */
+    max-width: 700px;
+    margin: 0 auto;
+}
+.purpose-intro-text p {
+    margin-bottom: 1em;
+}
+
+/* 課題セクション (スライド2枚目) */
+.purpose-challenge-section {
+    padding-top: 2em;
+}
+
+.purpose-section-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    color: #444;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* レスポンシブなグリッド */
+    gap: 30px;
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+.challenge-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.challenge-icon { /* アイコンのスタイル（SVGやFontAwesomeを想定） */
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: var(--color-secondary);
+    /* text-align: center; を item ではなく icon に適用しても良い */
+}
+.challenge-item h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+.challenge-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.purpose-transition-text {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #666;
+    margin-top: 1em;
+}
+
+
+/* 解決策・目的セクション (スライド3枚目) */
+.purpose-solution-section {
+    padding-top: 2em;
+}
+
+.solution-points {
+    display: flex;
+    flex-direction: column; /* まずは縦並び */
+    gap: 30px;
+    margin-top: 1.5em;
+    text-align: left;
+}
+
+.solution-point {
+    display: flex;
+    align-items: flex-start; /* アイコンとテキストの上端を揃える */
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 5px solid var(--color-primary); /* 左側にアクセントライン */
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.solution-icon { /* アイコンのスタイル */
+    font-size: 2.8em;
+    color: var(--color-primary);
+    flex-shrink: 0; /* アイコンが縮まないように */
+    margin-top: 5px; /* 微調整 */
+}
+
+.solution-point h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    color: #333;
+}
+.solution-point p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 0;
+}
+
+.purpose-final-statement {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-top: 2.5em;
+    padding: 1em;
+    background-color: #eef7ff; /* 明るい背景色 */
+    border-radius: 8px;
+    display: inline-block; /* 背景色の幅をテキストに合わせる */
+}
+
+
+/* フェードインアニメーションのキーフレーム */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブ対応の考慮 (必要に応じてメディアクエリを追加) */
+@media (min-width: 768px) {
+    .solution-points {
+        /* 幅が広ければ横並びも検討できるが、縦の方が見やすい場合も */
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    }
+}

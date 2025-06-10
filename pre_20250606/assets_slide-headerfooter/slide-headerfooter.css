@@ -1,0 +1,54 @@
+/* slide-headerfooter.css */
+
+/* 印刷時の用紙設定 */
+@page {
+    size: A4 landscape;
+    /* A4横向き */
+    margin: 1cm;
+    /* 印刷時のマージン */
+    /* 強制的にヘッダーフッターを非表示にする */
+    /* style.cssですべてコメントインする */
+    @top-left { content: ""; }
+    @top-right { content: ""; }
+    @top-center { content: ""; }
+    @bottom-left { content: ""; }
+    @bottom-center { content: ""; }
+    @bottom-right { content: ""; }
+}
+/*print.css*/
+@media print {
+    /* --- Print Slide Adjustments --- */
+    .slide {
+        page-break-after: always; /* スライドごとに改ページ */
+        page-break-inside: avoid; /* スライド内での改ページを避ける */
+        position: relative; /* ヘッダー・フッターの絶対配置の基準点 */
+        width: 29.7cm; /* A4横向きの幅 */
+        height: 20cm; /* A4横向きの高さ */
+        margin: 0; /* スライドのマージンを0に */
+    }
+    .print-header {
+        position: absolute;
+        top: 0; /* スライドの上端 */
+        right: 0; /* スライドの右端に合わせる */
+        display: flex;
+        justify-content: flex-end; /* ロゴを右に配置するため */
+    }
+    .print-footer {
+        position: absolute;
+        bottom: 0; /* スライドの下端 */
+        left: 0; /* スライドの左端に合わせる */
+        right: 0; /* スライドの右端に合わせる */
+        height: 20px; /* フッターの高さを指定 */
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px; /* フッターの左右にパディングを追加 */
+        background-color: #1e377e; /* 赤 #c81a1d、濃い青#1e377e、薄い青#36a2c4  */
+        color: #ffffff;
+        font-size: 10pt;
+    }
+    /* ★★★ フッターの要素の配置調整 ★★★ */
+    .print-footer .footer-center {
+        flex-grow: 1; /* 利用可能なスペースをすべて使う */
+        text-align: center; /* テキストを中央揃え */
+    }
+}
