@@ -1,0 +1,308 @@
+/* _common_parts/base_style.css */
+@charset "UTF-8";
+
+/* 各共通スライドパーツのCSS */
+@import url("01_title_slide.css");
+@import url("02_agenda_slide.css");
+@import url("02_exective_sumary-1-1.css");
+@import url("03_project_purpose.css");
+/* @import url("03_company_profile_slide.css");
+@import url("04_mission_vision_slide.css");
+@import url("05_problem_statement_slide.css");
+@import url("06_solution_overview_slide.css");
+@import url("07_product_detail_slide.css");
+@import url("08_case_study_slide.css");
+@import url("09_team_introduction_slide.css");
+@import url("10_pricing_table_slide.css");
+@import url("11_comparison_table_slide.css");
+@import url("12_call_to_action_slide.css");
+@import url("13_thank_you_slide.css");
+@import url("14_section_divider_slide.css");
+@import url("15_image_full_bleed_slide.css"); */
+/* ...他の共通パーツCSS... */
+
+
+
+/* ================================================== */
+/* ================== @page Rule ==================== */
+/* ================================================== */
+@page {
+    size: A4 landscape;
+    margin: 1cm;
+
+    @top-left { content: ""; }
+    @top-center { content: ""; }
+    @top-right { content: ""; }
+    @bottom-left { content: ""; }
+    @bottom-center { content: ""; }
+    @bottom-right { content: ""; }
+}
+
+/* ================================================== */
+/* ============ Basic Resets & Defaults ============= */
+/* ================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
+    color: var(--color-text-wp);
+    background-color: var(--color-bg-wp);
+    font-size: 1.6rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 2em;
+    margin-bottom: 1.6rem;
+}
+
+ol {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.6rem;
+}
+
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+a {
+    color: var(--color-primary-wp);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--color-heading-wp);
+}
+
+h1 { font-size: 3.8rem; }
+h2 { font-size: 3.0rem; }
+h3 { font-size: 2.2rem; }
+
+p { margin-bottom: 1.6rem; }
+
+strong { font-weight: bold; }
+
+/* ================================================== */
+/* =============== CSS Variables (WP) =============== */
+/* ================================================== */
+:root {
+    /* --- TG GLOBAL Colors --- */
+    --color-primary-wp: #0D2E4D;
+    --color-secondary-wp: #0077B6;
+    --color-accent-wp: #E8B730;
+    --color-highlight-bg-wp: #fff799;
+
+    /* --- Basic WP Colors --- */
+    --color-text-wp: #333;
+    --color-heading-wp: #111;
+    --color-bg-wp: #ffffff;
+    --color-bg-alt-wp: #f8f9fa;
+    --color-white-wp: #ffffff;
+    --color-black-wp: #000000;
+
+    /* --- Layout & Spacing (WP) --- */
+    --slide-padding-v-wp: 5rem;
+    --slide-padding-h-wp: 4rem;
+    --content-max-width-wp: 900px;
+
+    /* --- Print Variables --- */
+    --print-header-height: 1.2cm;
+    --print-footer-height: 0.8cm;
+    --print-v-margin: 0.6cm;
+}
+
+
+/* ================================================== */
+/* ============ Screen Layout & Styles (WP) ========= */
+/* ================================================== */
+.presentation-container {}
+
+.slide {
+    min-height: 100vh;
+    padding: var(--slide-padding-v-wp) var(--slide-padding-h-wp);
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative; /* For JS header/footer insertion */
+}
+
+.slide-content {
+    max-width: var(--content-max-width-wp);
+    width: 100%;
+}
+
+.slide:nth-child(even) {
+    background-color: var(--color-bg-alt-wp);
+}
+
+/* --- Highlight Style --- */
+.highlight {
+    background: linear-gradient(transparent 60%, var(--color-highlight-bg-wp) 60%);
+    padding: 0 0.1em;
+    margin: 0 -0.1em;
+    display: inline;
+    font-weight: bold;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* --- Slide Specific Styles (Screen View - WP) --- */
+
+/* Slide Cover */
+.slide-cover { /* Referencing by class */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                      url('../images/wp/WP_Cover_Image.jpg');
+    background-color: var(--color-primary-wp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white-wp);
+    text-align: center;
+}
+.slide-cover .slide-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    border-radius: 5px;
+    max-width: 800px;
+}
+.slide-cover .cover-logo {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto 1.5rem auto;
+    filter: brightness(0) invert(1);
+}
+.slide-cover .cover-title { /* h1 */
+    color: var(--color-white-wp);
+    font-size: 3.6rem; /* Adjusted */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+.cover-subtitle {
+    font-size: 1.8rem; /* Adjusted */
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+.presenter-company, .date {
+    font-size: 1.6rem; /* Adjusted */
+    opacity: 0.85;
+}
+.presenter-company { margin-bottom: 0.5rem; }
+
+/* Slide Images */
+.slide-image {
+    max-width: 450px;
+    margin: 2.5rem auto;
+    border-radius: 4px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+}
+.slide-image.small { max-width: 250px; }
+.slide-image.medium { max-width: 400px; }
+
+/* Strengths Section */
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.strength-item img {
+    max-height: 50px;
+    margin: 0 auto 1rem auto;
+}
+.strength-item h3 {
+    font-size: 1.7rem;
+    color: var(--color-primary-wp);
+    margin-bottom: 0.7rem;
+}
+
+/* Partnership Steps */
+ol.partnership-steps { /* Styles from previous response */ }
+ol.partnership-steps li {}
+ol.partnership-steps li::before {}
+.success-vision { /* Styles from previous response */ }
+
+
+/* CTA Section */
+.slide-cta .slide-content { text-align: center; } /* Styles from previous response */
+.cta-content p {}
+.cta-button-container {}
+.cta-button-wp {}
+.cta-button-wp:hover {}
+.contact-info {}
+.contact-info strong {}
+
+
+/* --- Responsive Design (Screen View - WP) --- */
+@media (max-width: 768px) {
+    html { font-size: 55%; }
+    :root {
+        --slide-padding-v-wp: 3.5rem;
+        --slide-padding-h-wp: 2rem;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.3rem; }
+    h3 { font-size: 1.9rem; }
+    .slide-cover .cover-title { font-size: 2.8rem; } /* Adjusted */
+    .cover-subtitle { font-size: 1.6rem; }
+    .strengths-grid { grid-template-columns: 1fr; }
+}
+
+/* 加载状态和错误提示样式 */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.6rem;
+}
+
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #c81a1d;
+    font-size: 1.6rem;
+    background-color: #fff;
+    border: 1px solid #c81a1d;
+    border-radius: 4px;
+    margin: 1rem;
+}
+
+.error pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    font-family: monospace;
+}
