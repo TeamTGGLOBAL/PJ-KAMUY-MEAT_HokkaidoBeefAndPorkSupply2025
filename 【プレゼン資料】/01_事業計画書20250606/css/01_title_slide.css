@@ -15,67 +15,100 @@
 /* ロゴ (.cover-logo) のスタイル例 */
 .cover-logo {
     display: block; /* 画像をブロック要素として扱う */
-    max-width: 150px; /* ロゴの最大幅 (適宜調整) */
+    max-width: 180px; /* ロゴの最大幅 (適宜調整) */
     height: auto; /* 高さは自動調整でアスペクト比を維持 */
-    margin: 0 auto 20px auto; /* 上0, 左右auto (中央揃え), 下20pxの余白 */
+    margin: 0 auto 32px auto; /* 上0, 左右auto (中央揃え), 下32pxの余白 */
+    filter: drop-shadow(0 4px 16px rgba(39,174,96,0.13));
+    transition: transform 0.3s;
+    z-index: 1;
+    position: relative;
+}
+.cover-logo:hover {
+    transform: scale(1.07) rotate(-2deg);
 }
 
 /* メインタイトル (.cover-title) のスタイル例 */
 .cover-title {
-    font-size: 2.8em; /* 親要素のフォントサイズに対する相対的な大きさ (適宜調整) */
-    /* color: #333; */ /* 色は親の .slide-cover や基本スタイルで定義されることを想定 */
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center; /* 中央揃え */
+    font-size: 3.4em;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
     margin-top: 0;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
+    letter-spacing: -1.5px;
+    color: #27ae60;
+    text-shadow: 2px 2px 16px rgba(39,174,96,0.10), 0 2px 8px rgba(41,128,185,0.08);
+    background: linear-gradient(90deg, #27ae60 30%, #2980b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+    position: relative;
 }
 
 /* サブタイトル (.cover-subtitle) のスタイル例 */
 .cover-subtitle {
-    font-size: 1.4em; /* 適宜調整 */
-    /* color: #555; */
+    font-size: 1.5em;
+    font-weight: 500;
     line-height: 1.5;
-    text-align: center; /* 中央揃え */
-    margin-bottom: 1.5em;
-    max-width: 80%; /* 長文の場合、中央揃えでも読みやすいように幅を制限 */
+    text-align: center;
+    margin-bottom: 2em;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    color: #34495e;
+    background: linear-gradient(90deg, #eaf6ff 0%, #eafff3 100%);
+    border-radius: 12px;
+    padding: 0.7em 1.5em;
+    box-shadow: 0 2px 12px rgba(41,128,185,0.06);
+    z-index: 1;
+    position: relative;
 }
 
 /* 発表者情報エリア (.presenter-info) のスタイル例 */
 .presenter-info {
-    font-size: 1em; /* 適宜調整 */
-    /* color: #666; */
-    text-align: center; /* 中央揃え */
-    margin-top: 30px; /* 上の要素との間に少しスペース */
+    font-size: 1.15em;
+    color: #555;
+    text-align: center;
+    margin-top: 48px;
+    background: linear-gradient(90deg, #f8f9fa 60%, #eafff3 100%);
+    border-radius: 10px;
+    padding: 1.2em 0.7em;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.05);
+    z-index: 1;
+    position: relative;
 }
 
 /* 発表者/会社名 (.presenter-company) のスタイル例 */
 .presenter-info .presenter-company {
     font-weight: bold;
+    font-size: 1.1em;
+    color: #2980b9;
     margin-bottom: 0.2em;
+    display: block;
+    letter-spacing: 0.5px;
 }
 
 /* 日付 (.date) のスタイル例 */
 .presenter-info .date {
-    font-size: 0.9em;
+    font-size: 0.98em;
+    color: #888;
+    margin-top: 0.2em;
+    display: block;
 }
 
-
-/* --- 親要素が .slide-cover の場合、より特化したスタイル (任意) --- */
-/*
-.slide-cover .cover-title {
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+@media (max-width: 700px) {
+    .cover-title {
+        font-size: 2em;
+    }
+    .cover-subtitle {
+        font-size: 1.1em;
+        padding: 0.5em 0.5em;
+    }
+    .presenter-info {
+        font-size: 0.98em;
+        padding: 0.7em 0.2em;
+    }
 }
-.slide-cover .cover-subtitle {
-    color: rgba(255,255,255,0.9);
-}
-.slide-cover .presenter-info {
-    color: rgba(255,255,255,0.8);
-}
-*/
 
 /*
   注意:

@@ -1,0 +1,161 @@
+/* management-team1.css */
+
+.slide-management-team1 {
+    padding: 40px;
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle at 100% 0%, rgba(231, 76, 60, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(52, 73, 94, 0.05) 0%, transparent 50%);
+}
+
+.slide-management-team1 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.slide-management-team1 .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.slide-management-team1 .company-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.slide-management-team1 .company-logo-section {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+.slide-management-team1 .company-logo {
+    max-width: 200px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.slide-management-team1 .company-logo:hover {
+    transform: scale(1.05);
+}
+
+.slide-management-team1 .company-building {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.slide-management-team1 .company-building:hover {
+    transform: scale(1.02);
+}
+
+.slide-management-team1 .company-info {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.slide-management-team1 .info-section {
+    margin-bottom: 30px;
+}
+
+.slide-management-team1 .info-section:last-child {
+    margin-bottom: 0;
+}
+
+.slide-management-team1 .info-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+    font-weight: 700;
+}
+
+.slide-management-team1 .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.slide-management-team1 .info-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.slide-management-team1 .info-table td:first-child {
+    font-weight: 600;
+    color: #2c3e50;
+    width: 40%;
+}
+
+.slide-management-team1 .info-table td:last-child {
+    color: #34495e;
+}
+
+.slide-management-team1 .history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-management-team1 .history-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #34495e;
+    position: relative;
+    padding-left: 25px;
+}
+
+.slide-management-team1 .history-list li:before {
+    content: "•";
+    color: #e74c3c;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+.slide-management-team1 .history-list li:last-child {
+    border-bottom: none;
+}
+
+/* 印刷時のスタイル */
+@media print {
+    .slide-management-team1 {
+        background-image: none;
+    }
+
+    .slide-management-team1 .common-title {
+        text-shadow: none;
+    }
+
+    .slide-management-team1 .company-logo-section,
+    .slide-management-team1 .company-info {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .slide-management-team1 .company-logo:hover,
+    .slide-management-team1 .company-building:hover {
+        transform: none;
+    }
+}

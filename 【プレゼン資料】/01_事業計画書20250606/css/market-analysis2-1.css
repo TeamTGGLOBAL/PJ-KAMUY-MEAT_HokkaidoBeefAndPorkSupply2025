@@ -1,0 +1,88 @@
+/* market-analysis2-1.css */
+
+.slide-market-analysis2-1 {
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.slide-market-analysis2-1 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.slide-market-analysis2-1 .title-bar {
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background-color: #e74c3c;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.slide-market-analysis2-1 .section-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #333;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #e74c3c;
+}
+
+.slide-market-analysis2-1 .market-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slide-market-analysis2-1 .market-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.slide-market-analysis2-1 .market-content {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.slide-market-analysis2-1 .market-content h4 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-size: 1.1em;
+}
+
+.slide-market-analysis2-1 .market-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.slide-market-analysis2-1 .market-content li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 印刷時のスタイル */
+@media print {
+    .slide-market-analysis2-1 {
+        page-break-after: always;
+    }
+
+    .slide-market-analysis2-1 .market-content {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .slide-market-analysis2-1 .market-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}

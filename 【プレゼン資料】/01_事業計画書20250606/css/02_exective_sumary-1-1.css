@@ -3,98 +3,122 @@
 
 /* --- エグゼクティブサマリースライド内の要素の基本的な配置やスタイル --- */
 
+.slide-executive-summary-1-1 {
+    background: linear-gradient(120deg, #f8fafc 60%, #eaf6ff 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
 .slide-executive-summary-1-1 .slide-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* コンテンツを中央揃え */
-    justify-content: center; /* 垂直方向も中央に（スライドの高さによる） */
-    padding: 2em; /* スライド全体のパディング */
-    text-align: center; /* 基本的にテキストは中央揃え */
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    text-align: center;
 }
 
 .summary-main-title {
-    font-size: 2.1em; /* メインタイトルは大きく */
-    font-weight: bold;
-    color: #333; /* 適宜調整 */
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #2980b9;
     margin-top: 0;
     margin-bottom: 0.5em;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 12px rgba(41,128,185,0.10);
+    background: linear-gradient(90deg, #27ae60 30%, #2980b9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .summary-subtitle {
-    font-size: 1.4em; /* サブタイトルも強調 */
-    font-weight: bold;
-    color: #007bff; /* 例: プライマリーカラー */
-    margin-bottom: 2em; /* グリッドとの間に余白 */
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 2em;
     padding-bottom: 0.5em;
-    border-bottom: 2px solid #eee; /* タイトル下に薄い区切り線 (任意) */
-    max-width: 80%; /* サブタイトルの幅を少し抑える */
+    border-bottom: 2px solid #eaf6ff;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    background: linear-gradient(90deg, #eaf6ff 0%, #eafff3 100%);
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(41,128,185,0.06);
 }
 
 /* --- 4つのポイントを配置するグリッド --- */
 .summary-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 横に2列 */
-    grid-template-rows: repeat(2, auto);    /* 縦に2行、高さはコンテンツに合わせる */
-    gap: 2em; /* 各アイテム間の余白 */
-    width: 100%; /* スライドコンテンツ幅いっぱいに */
-    max-width: 900px; /* グリッドの最大幅（適宜調整） */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    width: 100%;
+    max-width: 900px;
     margin-top: 1em;
 }
 
 .summary-grid-item {
-    background-color: #f9f9f9; /* 各アイテムの背景色（任意） */
-    padding: 1.5em;
-    border-radius: 8px; /* 角を丸くする（任意） */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影（任意） */
+    background: #fff;
+    padding: 2em 1.5em;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(41,128,185,0.10);
     display: flex;
     flex-direction: column;
-    align-items: center; /* アイテム内の要素を中央揃え */
-    text-align: center; /* アイテム内のテキストも中央揃え */
+    align-items: center;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+}
+.summary-grid-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 48px rgba(41,128,185,0.18);
+    background: linear-gradient(120deg, #eaf6ff 60%, #eafff3 100%);
 }
 
 .item-icon {
-    font-size: 2.5em; /* アイコンのサイズ */
-    color: #007bff; /* アイコンの色 */
-    margin-bottom: 0.5em;
-    /* ここにSVGやFontAwesomeのスタイルを指定 */
+    font-size: 2.8em;
+    color: #27ae60;
+    margin-bottom: 0.7em;
+    filter: drop-shadow(0 2px 8px rgba(39,174,96,0.10));
 }
 
 .item-title {
-    font-size: 1.3em;
+    font-size: 1.25em;
     font-weight: bold;
-    color: #333;
+    color: #2980b9;
     margin-top: 0;
     margin-bottom: 0.5em;
+    letter-spacing: 0.5px;
 }
 
 .item-text {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.5;
+    font-size: 1.05em;
+    color: #34495e;
+    line-height: 1.6;
     margin-bottom: 0.8em;
 }
 
 .item-keywords {
-    font-size: 0.9em;
-    color: #777;
+    font-size: 0.92em;
+    color: #27ae60;
     font-style: italic;
+    margin-top: 0.5em;
+    letter-spacing: 0.2px;
 }
 
 /* --- レスポンシブ対応（画面幅が狭い場合、1列にする例） --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .summary-grid {
-        grid-template-columns: 1fr; /* 1列にする */
+        grid-template-columns: 1fr;
     }
     .summary-main-title {
         font-size: 2em;
     }
     .summary-subtitle {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     .item-title {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 }
 

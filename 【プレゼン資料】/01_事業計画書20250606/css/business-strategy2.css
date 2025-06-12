@@ -1,0 +1,97 @@
+/* business-strategy2.css */
+
+.slide-business-strategy2 {
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.slide-business-strategy2 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.slide-business-strategy2 .title-bar {
+    display: inline-block;
+    width: 4px;
+    height: 24px;
+    background-color: #e74c3c;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.slide-business-strategy2 .section-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #333;
+    line-height: 1.6;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #e74c3c;
+}
+
+.slide-business-strategy2 .strategy-item {
+    margin-bottom: 40px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.slide-business-strategy2 .strategy-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.slide-business-strategy2 .strategy-content {
+    line-height: 1.6;
+}
+
+.slide-business-strategy2 .strategy-content h4 {
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-size: 1.1em;
+}
+
+.slide-business-strategy2 .strategy-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.slide-business-strategy2 .strategy-content li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.slide-business-strategy2 .promo-highlight {
+    background-color: #fef5e7;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.slide-business-strategy2 .promo-highlight h4 {
+    color: #d35400;
+    margin-top: 0;
+}
+
+/* 印刷時のスタイル */
+@media print {
+    .slide-business-strategy2 {
+        page-break-after: always;
+    }
+
+    .slide-business-strategy2 .strategy-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .slide-business-strategy2 .promo-highlight {
+        background-color: transparent;
+        border: 1px solid #d35400;
+    }
+}

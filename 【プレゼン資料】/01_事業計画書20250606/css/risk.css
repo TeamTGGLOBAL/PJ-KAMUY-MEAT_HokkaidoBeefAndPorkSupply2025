@@ -1,0 +1,109 @@
+/* risk.css */
+
+.slide-risk {
+    padding: 40px;
+    background: #fff;
+    background-image: linear-gradient(120deg, #f8fafc 60%, #ffeaea 100%);
+}
+
+.slide-risk .common-title {
+    margin-bottom: 30px;
+    color: #c0392b;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(192,57,43,0.08);
+}
+
+.slide-risk .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #c0392b, #e67e22);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.slide-risk .section-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #34495e;
+    line-height: 1.7;
+    padding: 20px;
+    background: linear-gradient(to right, #f8f9fa, #ffeaea);
+    border-left: 4px solid #c0392b;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 2px 12px rgba(192,57,43,0.06);
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.risk-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(192,57,43,0.10);
+    padding: 28px 22px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.risk-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 6px;
+    background: linear-gradient(to right, #c0392b, #e67e22);
+    border-radius: 16px 16px 0 0;
+}
+
+.risk-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(192,57,43,0.18);
+}
+
+.risk-title {
+    font-size: 1.15em;
+    color: #c0392b;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.risk-desc {
+    color: #34495e;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.risk-action {
+    color: #27ae60;
+    font-size: 0.98em;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.risk-management-box {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffeaea 100%);
+    border-left: 4px solid #c0392b;
+    border-radius: 0 12px 12px 0;
+    padding: 24px 28px;
+    box-shadow: 0 2px 12px rgba(192,57,43,0.06);
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+@media (max-width: 900px) {
+    .slide-risk {
+        padding: 18px;
+    }
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+}

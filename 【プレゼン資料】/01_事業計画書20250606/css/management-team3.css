@@ -1,0 +1,181 @@
+/* management-team3.css */
+
+.slide-management-team3 {
+    padding: 40px;
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle at 100% 0%, rgba(46, 204, 113, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(39, 174, 96, 0.05) 0%, transparent 50%);
+}
+
+.slide-management-team3 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.slide-management-team3 .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #2ecc71, #27ae60);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
+}
+
+.slide-management-team3 .section-intro {
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    color: #34495e;
+    line-height: 1.8;
+    padding: 25px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-left: 4px solid #2ecc71;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 12px 12px 0;
+}
+
+.slide-management-team3 .section-intro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(46, 204, 113, 0.1));
+}
+
+.slide-management-team3 .plan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.slide-management-team3 .plan-item {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+}
+
+.slide-management-team3 .plan-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #2ecc71, #27ae60);
+}
+
+.slide-management-team3 .plan-item:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 40px rgba(46, 204, 113, 0.15);
+}
+
+.slide-management-team3 .plan-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.slide-management-team3 .plan-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #2ecc71;
+}
+
+.slide-management-team3 .plan-content {
+    color: #34495e;
+    line-height: 1.8;
+}
+
+.slide-management-team3 .plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.slide-management-team3 .plan-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #34495e;
+    position: relative;
+    padding-left: 25px;
+}
+
+.slide-management-team3 .plan-list li:before {
+    content: "→";
+    color: #2ecc71;
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.slide-management-team3 .plan-list li:hover:before {
+    transform: translateX(4px);
+}
+
+.slide-management-team3 .plan-list li:last-child {
+    border-bottom: none;
+}
+
+.slide-management-team3 .budget-highlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    border-left: 4px solid #2ecc71;
+}
+
+.slide-management-team3 .budget-highlight h4 {
+    color: #2ecc71;
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+/* 印刷時のスタイル */
+@media print {
+    .slide-management-team3 {
+        background-image: none;
+    }
+
+    .slide-management-team3 .common-title {
+        text-shadow: none;
+    }
+
+    .slide-management-team3 .plan-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .slide-management-team3 .plan-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .slide-management-team3 .budget-highlight {
+        background: none;
+        border: 1px solid #2ecc71;
+    }
+}

@@ -1,0 +1,169 @@
+/* management-team2.css */
+
+.slide-management-team2 {
+    padding: 40px;
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle at 100% 0%, rgba(52, 152, 219, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(41, 128, 185, 0.05) 0%, transparent 50%);
+}
+
+.slide-management-team2 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.slide-management-team2 .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+}
+
+.slide-management-team2 .section-intro {
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    color: #34495e;
+    line-height: 1.8;
+    padding: 25px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-left: 4px solid #3498db;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 12px 12px 0;
+}
+
+.slide-management-team2 .section-intro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(52, 152, 219, 0.1));
+}
+
+.slide-management-team2 .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.slide-management-team2 .team-item {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-management-team2 .team-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+}
+
+.slide-management-team2 .team-item:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 12px 40px rgba(52, 152, 219, 0.15);
+}
+
+.slide-management-team2 .team-image {
+    width: 100%;
+    height: 300px;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-management-team2 .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.slide-management-team2 .team-item:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.slide-management-team2 .team-content {
+    padding: 25px;
+}
+
+.slide-management-team2 .team-title {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.slide-management-team2 .team-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+}
+
+.slide-management-team2 .team-description {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.slide-management-team2 .team-role {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #e8f4fc;
+    color: #2980b9;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* 印刷時のスタイル */
+@media print {
+    .slide-management-team2 {
+        background-image: none;
+    }
+
+    .slide-management-team2 .common-title {
+        text-shadow: none;
+    }
+
+    .slide-management-team2 .team-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .slide-management-team2 .team-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .slide-management-team2 .team-image img {
+        transform: none;
+    }
+}
