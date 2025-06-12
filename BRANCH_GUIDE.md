@@ -105,3 +105,20 @@ feat: ユーザー認証機能の追加
 - 長期にわたるブランチは避ける
 - 定期的に`develop`ブランチの変更を取り込む
 - ブランチの目的を明確にする 
+
+
+## 現在のブランチ
+
+### ローカルブランチ
+- develop
+- experiment/kenny-update-folder-list
+- feature/kenny-createcontents-bycursor（現在のブランチ）
+- feature/update_folder_list
+- main
+
+### リモートブランチ
+- origin/HEAD → origin/main
+- origin/develop
+- origin/main
+
+現在はfeature/kenny-createcontents-bycursorブランチで作業されています。
