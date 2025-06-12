@@ -4,8 +4,44 @@
 /* 各共通スライドパーツのCSS */
 @import url("01_title_slide.css");
 @import url("02_agenda_slide.css");
+@import url("02_exective_sumary1.css");
 @import url("02_exective_sumary-1-1.css");
 @import url("03_project_purpose.css");
+@import url("market-analysis1.css");
+@import url("market-analysis2-1.css");
+@import url("market-analysis3-1.css");
+@import url("market-analysis4-1.css");
+@import url("business-strategy1.css");
+@import url("business-strategy2.css");
+@import url("business-strategy3.css");
+@import url("business-strategy4.css");
+@import url("operation-plan1.css");
+@import url("operation-plan2.css");
+@import url("operation-plan3.css");
+@import url("operation-plan4.css");
+@import url("management-team1.css");
+@import url("management-team2.css");
+@import url("management-team3.css");
+@import url("management-team4.css");
+@import url("milestone1.css");
+@import url("milestone2.css");
+@import url("milestone3.css");
+@import url("finance-overview.css");
+@import url("finance1.css");
+@import url("finance2.css");
+@import url("finance3.css");
+@import url("finance4.css");
+@import url("finance5.css");
+@import url("finance6.css");
+@import url("finance7.css");
+@import url("risk.css");
+@import url("conclusion1.css");
+@import url("conclusion2.css");
+@import url("conclusion3.css");
+@import url("conclusion4.css");
+
+
+
 /* @import url("03_company_profile_slide.css");
 @import url("04_mission_vision_slide.css");
 @import url("05_problem_statement_slide.css");
@@ -20,8 +56,6 @@
 @import url("14_section_divider_slide.css");
 @import url("15_image_full_bleed_slide.css"); */
 /* ...他の共通パーツCSS... */
-
-
 
 /* ================================================== */
 /* ================== @page Rule ==================== */
@@ -279,3 +313,4 @@ ol.partnership-steps li::before {}
     .cover-subtitle { font-size: 1.6rem; }
     .strengths-grid { grid-template-columns: 1fr; }
 }
+

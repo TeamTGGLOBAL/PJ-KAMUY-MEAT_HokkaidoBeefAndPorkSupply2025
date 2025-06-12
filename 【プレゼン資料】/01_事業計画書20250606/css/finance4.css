@@ -1,0 +1,99 @@
+/* finance4.css */
+
+.slide-finance4 {
+    padding: 40px;
+    background: #fff;
+    background-image: linear-gradient(120deg, #f8fafc 60%, #eafff3 100%);
+}
+
+.slide-finance4 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.08);
+}
+
+.slide-finance4 .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #27ae60, #2980b9);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.slide-finance4 .section-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #34495e;
+    line-height: 1.7;
+    padding: 20px;
+    background: linear-gradient(to right, #f8f9fa, #eafff3);
+    border-left: 4px solid #27ae60;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 2px 12px rgba(39,174,96,0.06);
+}
+
+.cf-graph {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 60px 0 40px 0;
+    height: 220px;
+    position: relative;
+}
+
+.cf-bar {
+    width: 90px;
+    background: linear-gradient(135deg, #27ae60 60%, #2980b9 100%);
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 20px rgba(39,174,96,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.cf-bar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(39,174,96,0.18);
+}
+
+.cf-bar .bar-value {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 4px rgba(39,174,96,0.15);
+}
+
+.cf-bar .bar-label {
+    font-size: 1em;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: #eafff3;
+    border-radius: 8px;
+    padding: 4px 12px;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.06);
+}
+
+@media (max-width: 900px) {
+    .cf-graph {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+    .cf-bar {
+        width: 90%;
+        min-width: 180px;
+        margin: 0 auto;
+    }
+}

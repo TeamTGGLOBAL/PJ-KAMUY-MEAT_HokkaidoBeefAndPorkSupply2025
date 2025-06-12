@@ -80,3 +80,91 @@
   - 印刷時のスタイル調整は、主に css/print.css の @media print ブロックで行います。
     このファイルでは、画面表示と印刷表示で共通して問題ない基本的なスタイルを記述します。
 */
+
+/* 02_agenda_slide.css - モダンリファイン版 */
+
+.slide-agenda {
+    padding: 40px;
+    background: #fff;
+    background-image: linear-gradient(120deg, #f8fafc 60%, #eaf6ff 100%);
+}
+
+.slide-agenda .common-title {
+    margin-bottom: 30px;
+    color: #2980b9;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(41,128,185,0.08);
+}
+
+.slide-agenda .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #2980b9, #27ae60);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.agenda-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.agenda-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    color: #2c3e50;
+    font-weight: 600;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(41,128,185,0.06);
+    margin-bottom: 18px;
+    padding: 18px 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.agenda-list li:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 24px rgba(41,128,185,0.12);
+    background: linear-gradient(90deg, #eaf6ff 0%, #eafff3 100%);
+}
+
+.agenda-step {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #2980b9 60%, #27ae60 100%);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 800;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    margin-right: 18px;
+    box-shadow: 0 2px 8px rgba(41,128,185,0.10);
+    flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+    .slide-agenda {
+        padding: 18px;
+    }
+    .agenda-list li {
+        font-size: 1em;
+        padding: 12px 10px;
+    }
+    .agenda-step {
+        width: 28px;
+        height: 28px;
+        font-size: 1em;
+        line-height: 28px;
+        margin-right: 10px;
+    }
+}

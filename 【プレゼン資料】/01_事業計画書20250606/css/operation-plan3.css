@@ -1,0 +1,185 @@
+/* operation-plan3.css */
+
+.slide-operation-plan3 {
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.slide-operation-plan3 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+.slide-operation-plan3 .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.slide-operation-plan3 .section-intro {
+    font-size: 1.3em;
+    margin-bottom: 50px;
+    color: #34495e;
+    line-height: 1.8;
+    padding: 25px;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-left: 4px solid #9b59b6;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-operation-plan3 .section-intro::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(155, 89, 182, 0.1));
+}
+
+.slide-operation-plan3 .strategy-item {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-operation-plan3 .strategy-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #9b59b6, #8e44ad);
+}
+
+.slide-operation-plan3 .strategy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(155, 89, 182, 0.15);
+}
+
+.slide-operation-plan3 .strategy-title {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #9b59b6;
+    font-weight: 700;
+    position: relative;
+}
+
+.slide-operation-plan3 .strategy-content {
+    line-height: 1.8;
+}
+
+.slide-operation-plan3 .strategy-content h4 {
+    color: #2c3e50;
+    margin: 25px 0 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.slide-operation-plan3 .strategy-content h4::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: #9b59b6;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.slide-operation-plan3 .strategy-content ul {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+.slide-operation-plan3 .strategy-content li {
+    margin-bottom: 15px;
+    color: #34495e;
+    position: relative;
+    padding-left: 25px;
+    transition: transform 0.2s ease;
+}
+
+.slide-operation-plan3 .strategy-content li:hover {
+    transform: translateX(5px);
+}
+
+.slide-operation-plan3 .strategy-content li:before {
+    content: "→";
+    color: #9b59b6;
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+}
+
+.slide-operation-plan3 .system-box {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 4px solid #9b59b6;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-operation-plan3 .system-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(155, 89, 182, 0.1));
+}
+
+.slide-operation-plan3 .system-box h4 {
+    color: #9b59b6;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+/* 印刷時のスタイル */
+@media print {
+    .slide-operation-plan3 {
+        page-break-after: always;
+    }
+
+    .slide-operation-plan3 .strategy-item {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .slide-operation-plan3 .strategy-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .slide-operation-plan3 .system-box {
+        background: none;
+        border: 1px solid #9b59b6;
+    }
+
+    .slide-operation-plan3 .strategy-content li:hover {
+        transform: none;
+    }
+}

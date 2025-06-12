@@ -1,0 +1,104 @@
+/* 02_exective_sumary1.css - モダンリファイン版 */
+
+.slide-executive-summary {
+    background: linear-gradient(120deg, #f8fafc 60%, #eaf6ff 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.slide-executive-summary .common-title {
+    margin-bottom: 30px;
+    color: #2980b9;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(41,128,185,0.08);
+}
+
+.slide-executive-summary .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #2980b9, #27ae60);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.slide-executive-summary .slide-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+.summary-outline {
+    background: linear-gradient(90deg, #eaf6ff 0%, #eafff3 100%);
+    border-left: 6px solid #2980b9;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 2px 12px rgba(41,128,185,0.06);
+    padding: 1.5em 2em;
+    margin-bottom: 2.5em;
+    text-align: left;
+}
+
+.summary-outline-title {
+    color: #2980b9;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.summary-outline-text {
+    color: #34495e;
+    font-size: 1.08em;
+    line-height: 1.7;
+}
+
+.summary-item {
+    background: #fff;
+    border-left: 6px solid #27ae60;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 2px 12px rgba(39,174,96,0.06);
+    padding: 1.2em 1.5em;
+    margin-bottom: 1.3em;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.summary-item:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 24px rgba(39,174,96,0.12);
+    background: linear-gradient(90deg, #eafff3 0%, #eaf6ff 100%);
+}
+
+.summary-title {
+    color: #27ae60;
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.5px;
+}
+
+.summary-text {
+    color: #34495e;
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .slide-executive-summary {
+        padding: 18px 0;
+    }
+    .slide-executive-summary .slide-content {
+        padding: 1em 0.2em;
+    }
+    .summary-outline,
+    .summary-item {
+        padding: 1em 0.7em;
+        font-size: 0.98em;
+    }
+    .common-title {
+        font-size: 1.3em;
+    }
+}
