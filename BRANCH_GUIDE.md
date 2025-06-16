@@ -110,9 +110,9 @@ feat: ユーザー認証機能の追加
 ## 現在のブランチ
 
 ### ローカルブランチ
-- develop
+- develop（現在のブランチ）
 - experiment/kenny-update-folder-list
-- feature/kenny-createcontents-bycursor（現在のブランチ）
+- feature/kenny-createcontents-bycursor（developにマージ済み 20250617）
 - feature/update_folder_list
 - main
 
@@ -121,4 +121,4 @@ feat: ユーザー認証機能の追加
 - origin/develop
 - origin/main
 
-現在はfeature/kenny-createcontents-bycursorブランチで作業されています。
+現在はdevelopブランチで作業されています。
