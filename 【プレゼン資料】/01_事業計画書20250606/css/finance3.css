@@ -1,0 +1,88 @@
+/* finance3.css */
+
+.slide-finance3 {
+    padding: 40px;
+    background: #fff;
+    background-image: linear-gradient(120deg, #f8fafc 60%, #eafff3 100%);
+}
+
+.slide-finance3 .common-title {
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.08);
+}
+
+.slide-finance3 .title-bar {
+    display: inline-block;
+    width: 6px;
+    height: 32px;
+    background: linear-gradient(to bottom, #27ae60, #2980b9);
+    margin-right: 15px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.slide-finance3 .section-intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #34495e;
+    line-height: 1.7;
+    padding: 20px;
+    background: linear-gradient(to right, #f8f9fa, #eafff3);
+    border-left: 4px solid #27ae60;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 2px 12px rgba(39,174,96,0.06);
+}
+
+.pl-table-wrap {
+    overflow-x: auto;
+    margin-top: 40px;
+}
+
+.pl-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(39,174,96,0.08);
+    overflow: hidden;
+}
+
+.pl-table th, .pl-table td {
+    padding: 18px 14px;
+    text-align: center;
+}
+
+.pl-table th {
+    background: linear-gradient(to right, #eafff3, #f8fafc);
+    color: #27ae60;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-bottom: 2px solid #27ae60;
+}
+
+.pl-table td {
+    color: #34495e;
+    font-size: 1.05em;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.pl-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pl-table .pl-highlight {
+    background: #eafff3;
+    color: #27ae60;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .pl-table th, .pl-table td {
+        padding: 10px 6px;
+        font-size: 0.95em;
+    }
+}

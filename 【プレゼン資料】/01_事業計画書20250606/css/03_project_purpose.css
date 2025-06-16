@@ -1,172 +1,225 @@
-/* _new_section_styles/project_purpose.css など新しいファイルを作成するか、既存の共通CSSに追加 */
+/* _new_section_styles/project_purpose.css - モダンリファイン版 */
 
-/* スライド共通の基本スタイル（既存の .slide を継承または調整） */
+/* スライド全体の基本スタイル */
 .slide-project-purpose {
-    padding: 40px 5%; /* 上下左右の余白 */
-    text-align: center; /* 基本は中央揃えにするが、セクションごとに調整 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 縦方向中央揃え */
-    min-height: 80vh; /* スライドの高さを確保 */
+    background: linear-gradient(120deg, #fdfdfe 60%, #f0f9ff 100%); /* エグゼクティブサマリーに近い淡いグラデーション */
+    min-height: 100vh; /* スライドの高さを確保、状況に応じて調整 */
+    padding: 50px 0; /* 上下の余白を増やす */
+    display: flex; /* 中央揃えのため */
+    align-items: center; /* 縦方向中央揃え */
+    justify-content: center; /* 横方向中央揃え */
 }
 
 .slide-project-purpose .slide-content {
-    max-width: 900px; /* コンテンツの最大幅 */
-    margin: 0 auto; /* 中央揃え */
+    max-width: 960px; /* コンテンツの最大幅を少し広げる */
+    margin: 0 auto;
+    padding: 2em 1.5em; /* コンテンツ内の余白 */
+    width: 90%; /* レスポンシブ対応 */
 }
+
+/* 共通のセクションタイトルスタイル (エグゼクティブサマリーの .common-title を参考) */
+.purpose-common-title {
+    margin-bottom: 40px; /* 十分な余白 */
+    color: #2c3e50; /* 少し濃いめの落ち着いた色 */
+    font-size: 2.4em; /* エグゼクティブサマリーより少し大きく、スライドのメインタイトルとして */
+    font-weight: 700;
+    text-align: center; /* スライド全体のタイトルは中央揃え */
+    letter-spacing: -0.5px;
+    position: relative; /* 疑似要素での装飾のため */
+    padding-bottom: 15px; /* 下線とのスペース */
+}
+/* タイトルの下にアクセントライン */
+.purpose-common-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px; /* ラインの長さ */
+    height: 4px; /* ラインの太さ */
+    background: linear-gradient(to right, var(--color-primary, #3498db), var(--color-secondary, #2ecc71)); /* テーマカラーのグラデーション */
+    border-radius: 2px;
+}
+
 
 /* ヒーローセクション (スライド1枚目) */
 .purpose-hero-section {
-    animation: fadeInSlide 1s ease-out; /* フェードインアニメーション */
-}
-
-.purpose-main-title {
-    font-size: 2.8em; /* メインタイトル */
-    font-weight: bold;
-    color: var(--color-primary); /* テーマのプライマリカラー */
-    margin-bottom: 0.5em;
+    text-align: center; /* ヒーローセクションは中央揃えを基調に */
+    animation: fadeInSlide 1s ease-out;
 }
 
 .purpose-key-message {
-    font-size: 2.2em; /* インパクトのあるキーメッセージ */
-    font-weight: 500;
-    line-height: 1.4;
-    margin-bottom: 1.5em;
-    color: #333;
+    font-size: 2em; /* エグゼクティブサマリーのタイトルよりは少し抑えめに */
+    font-weight: 600; /* 太すぎず、しかし力強く */
+    line-height: 1.5;
+    margin-bottom: 1.8em;
+    color: #34495e; /* メインテキストカラー */
 }
 
 .purpose-key-message .highlight {
-    color: var(--color-accent); /* 強調色 */
-    font-weight: bold;
-    /* text-decoration: underline; */ /* 下線なども検討 */
+    color: var(--color-accent, #e74c3c); /* 強調色 */
+    font-weight: 700;
+    background: linear-gradient(to top, rgba(255, 235, 59, 0.5) 40%, transparent 40%); /* マーカー風の背景 */
+    padding: 0.1em 0.2em;
 }
 
 .purpose-intro-text {
-    font-size: 1.2em;
-    line-height: 1.7;
-    text-align: left; /* 導入文は左揃えの方が見やすい場合も */
-    max-width: 700px;
+    font-size: 1.15em; /* 少し大きめに見やすく */
+    line-height: 1.8; /* 行間を広めに */
+    text-align: left;
+    max-width: 750px; /* 最大幅調整 */
     margin: 0 auto;
+    color: #555;
+    background: #ffffff; /* 白背景で読みやすく */
+    padding: 1.5em 2em;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
 }
 .purpose-intro-text p {
     margin-bottom: 1em;
 }
+.purpose-intro-text p:last-child {
+    margin-bottom: 0;
+}
+
 
 /* 課題セクション (スライド2枚目) */
 .purpose-challenge-section {
-    padding-top: 2em;
+    padding-top: 3em; /* 上の余白を確保 */
 }
+/* .purpose-section-title は .purpose-common-title を流用 */
 
-.purpose-section-title {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 1.5em;
-    color: #444;
-}
 
 .challenge-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* レスポンシブなグリッド */
-    gap: 30px;
-    margin-bottom: 2em;
+    /* 6つのアイテムなので、PCでは3列、タブレット等では2列に */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* 隙間を少し狭める */
+    margin-bottom: 2.5em; /* 下の余白 */
     text-align: left;
 }
 
 .challenge-item {
-    background-color: #f9f9f9;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background: #fff; /* エグゼクティブサマリーの .summary-item を参考に */
+    border-left: 5px solid var(--color-secondary, #2ecc71); /* 左のアクセントバー */
+    border-radius: 0 8px 8px 0; /* 右側と角を丸める */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* 少し柔らかな影 */
+    padding: 20px 25px; /* 内側の余白 */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    display: flex; /* アイコンとテキストを柔軟に配置するため */
+    flex-direction: column; /* 基本は縦積み */
 }
 
-.challenge-icon { /* アイコンのスタイル（SVGやFontAwesomeを想定） */
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-    color: var(--color-secondary);
-    /* text-align: center; を item ではなく icon に適用しても良い */
+.challenge-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.challenge-icon {
+    font-size: 2.2em; /* 少し小さめに調整 */
+    margin-bottom: 0.6em;
+    color: var(--color-secondary, #2ecc71);
+    text-align: center; /* アイコンは中央揃え */
+    height: 40px; /* アイコンの高さを揃える（必要に応じて調整） */
+    line-height: 40px; /* 縦方向中央揃え */
 }
 .challenge-item h4 {
-    font-size: 1.3em;
-    font-weight: bold;
+    font-size: 1.2em; /* 少し小さめに */
+    font-weight: 700;
     margin-bottom: 0.5em;
     color: #333;
+    text-align: center; /* タイトルも中央揃え */
 }
 .challenge-item p {
-    font-size: 1em;
+    font-size: 0.95em; /* 説明文は少し小さく */
     line-height: 1.6;
     color: #555;
+    flex-grow: 1; /* 内容が少なくても高さを揃えるため */
 }
 
 .purpose-transition-text {
     font-size: 1.1em;
     font-style: italic;
-    color: #666;
-    margin-top: 1em;
+    color: #7f8c8d; /* 少し落ち着いた色 */
+    margin-top: 1.5em;
+    text-align: center;
 }
 
 
 /* 解決策・目的セクション (スライド3枚目) */
 .purpose-solution-section {
-    padding-top: 2em;
+    padding-top: 3em;
 }
+/* .purpose-section-title は .purpose-common-title を流用 */
 
 .solution-points {
-    display: flex;
-    flex-direction: column; /* まずは縦並び */
-    gap: 30px;
-    margin-top: 1.5em;
-    text-align: left;
+    display: grid; /* グリッドレイアウトに変更 */
+    grid-template-columns: 1fr; /* まずは1列 */
+    gap: 25px; /* 要素間の隙間 */
+    margin-top: 2em;
 }
 
 .solution-point {
-    display: flex;
-    align-items: flex-start; /* アイコンとテキストの上端を揃える */
-    gap: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-left: 5px solid var(--color-primary); /* 左側にアクセントライン */
+    background: #fff;
+    border-left: 5px solid var(--color-primary, #3498db); /* 左のアクセントバー */
     border-radius: 0 8px 8px 0;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    padding: 25px 30px; /* 内側の余白を広めに */
+    display: flex; /* アイコンとテキストを横並び */
+    align-items: center; /* 縦方向中央揃え */
+    gap: 25px; /* アイコンとテキスト間の隙間 */
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.solution-point:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.solution-icon { /* アイコンのスタイル */
-    font-size: 2.8em;
-    color: var(--color-primary);
-    flex-shrink: 0; /* アイコンが縮まないように */
-    margin-top: 5px; /* 微調整 */
+
+.solution-icon {
+    font-size: 3em; /* アイコンを大きく */
+    color: var(--color-primary, #3498db);
+    flex-shrink: 0;
+    width: 60px; /* アイコンエリアの幅を固定 */
+    text-align: center;
+}
+.solution-text-content { /* テキスト部分をまとめるコンテナ */
+    text-align: left;
 }
 
 .solution-point h4 {
-    font-size: 1.4em;
-    font-weight: bold;
+    font-size: 1.35em; /* 少し大きめ */
+    font-weight: 700;
     margin-top: 0;
-    margin-bottom: 0.4em;
-    color: #333;
+    margin-bottom: 0.5em;
+    color: #2c3e50;
 }
 .solution-point p {
     font-size: 1.05em;
-    line-height: 1.6;
+    line-height: 1.7; /* 行間を広め */
     color: #555;
     margin-bottom: 0;
 }
 
 .purpose-final-statement {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--color-primary);
-    margin-top: 2.5em;
-    padding: 1em;
-    background-color: #eef7ff; /* 明るい背景色 */
-    border-radius: 8px;
-    display: inline-block; /* 背景色の幅をテキストに合わせる */
+    font-size: 1.6em; /* 強調 */
+    font-weight: 700; /* 太字 */
+    color: var(--color-primary, #3498db);
+    margin-top: 3em; /* 十分な余白 */
+    padding: 1.2em 1.5em;
+    background: linear-gradient(to right, #e0f2fe, #e6fffa); /* 淡いグラデーション背景 */
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
 }
 
 
-/* フェードインアニメーションのキーフレーム */
+/* フェードインアニメーションのキーフレーム (共通) */
 @keyframes fadeInSlide {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px); /* 少し大きめに動かす */
     }
     to {
         opacity: 1;
@@ -174,10 +227,89 @@
     }
 }
 
-/* レスポンシブ対応の考慮 (必要に応じてメディアクエリを追加) */
-@media (min-width: 768px) {
-    .solution-points {
-        /* 幅が広ければ横並びも検討できるが、縦の方が見やすい場合も */
-        /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+/* レスポンシブ対応 */
+@media (max-width: 900px) { /* タブレットサイズ以下 */
+    .slide-project-purpose {
+        padding: 30px 0;
+    }
+    .slide-project-purpose .slide-content {
+        padding: 1.5em 1em;
+        width: 95%;
+    }
+    .purpose-common-title {
+        font-size: 2em;
+    }
+    .purpose-key-message {
+        font-size: 1.6em;
+    }
+    .purpose-intro-text {
+        font-size: 1.05em;
+        padding: 1em 1.2em;
+    }
+
+    .challenge-grid {
+        grid-template-columns: repeat(2, 1fr); /* タブレットでは2列 */
+        gap: 20px;
+    }
+    .challenge-item {
+        padding: 15px 20px;
+    }
+    .challenge-item h4 {
+        font-size: 1.1em;
+    }
+    .challenge-item p {
+        font-size: 0.9em;
+    }
+    .solution-point {
+        padding: 20px;
+        gap: 15px;
+    }
+    .solution-icon {
+        font-size: 2.5em;
+        width: 50px;
+    }
+    .solution-point h4 {
+        font-size: 1.25em;
+    }
+    .solution-point p {
+        font-size: 1em;
+    }
+    .purpose-final-statement {
+        font-size: 1.3em;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 600px) { /* スマートフォンサイズ */
+    .purpose-common-title {
+        font-size: 1.8em;
+    }
+    .purpose-common-title::after {
+        width: 60px;
+        height: 3px;
+    }
+    .purpose-key-message {
+        font-size: 1.4em;
+    }
+    .purpose-intro-text {
+        font-size: 1em;
+    }
+    .challenge-grid {
+        grid-template-columns: 1fr; /* スマートフォンでは1列 */
+        gap: 15px;
+    }
+    .solution-point {
+        flex-direction: column; /* スマートフォンではアイコンをテキストの上に */
+        align-items: center;
+        text-align: center;
+    }
+    .solution-icon {
+        margin-bottom: 0.5em;
+    }
+    .solution-text-content {
+        text-align: center;
+    }
+    .purpose-final-statement {
+        font-size: 1.2em;
     }
 }
