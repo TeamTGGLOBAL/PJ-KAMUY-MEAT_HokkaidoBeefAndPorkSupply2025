@@ -42,7 +42,7 @@
         display: flex;
         justify-content: space-between;
         padding: 0 10px; /* フッターの左右にパディングを追加 */
-        background-color: #1e377e; /* 赤 #c81a1d、濃い青#1e377e、薄い青#36a2c4  */
+        background-color: #c81a1d; /* 赤 #c81a1d、濃い青#1e377e、薄い青#36a2c4  */
         color: #ffffff;
         font-size: 10pt;
     }

@@ -1,0 +1,282 @@
+.slide-supply-chain-strategy {
+    padding: 2rem;
+}
+
+.supply-chain-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* サプライチェーン概要 */
+.supply-chain-overview {
+    margin-bottom: 3rem;
+}
+
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.overview-main {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.overview-main h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.overview-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+/* サプライチェーンフロー */
+.supply-chain-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #108240;
+}
+
+.flow-step {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.flow-step h5 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.flow-step p {
+    color: #34495e;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.flow-arrow {
+    color: #3498db;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+/* トレーサビリティシステム */
+.traceability-system {
+    margin-bottom: 3rem;
+}
+
+.traceability-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.system-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.feature-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-item li {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* システムメリット */
+.system-benefits {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.system-benefits h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.benefit-item h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+    color: #34495e;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* 品質管理システム */
+.quality-control {
+    margin-bottom: 2rem;
+    border-left: 4px solid #108240;
+}
+
+.quality-control-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.control-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.control-item {
+    padding: 1rem;
+}
+
+.control-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.control-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.control-item li {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.control-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #108240;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .system-features,
+    .benefits-grid,
+    .control-points {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .supply-chain-flow {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .system-features,
+    .benefits-grid,
+    .control-points {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-main h4 {
+        font-size: 1.5rem;
+    }
+
+    .flow-step {
+        width: 100%;
+    }
+}
+
+.slide-supply-chain-strategy .title-bar {
+    background-color: #108240 !important;
+    width: 4px !important;
+    height: 40px !important;
+    margin-right: 18px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+.slide-supply-chain-strategy .section-title {
+    color: #108240 !important;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 6px solid #108240 !important;
+    border-bottom: none !important;
+    background: none !important;
+    padding-left: 1.2rem;
+} 

@@ -1,0 +1,131 @@
+.slide-competitor-analysis {
+    padding: 2rem;
+}
+
+.competitor-analysis-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.analysis-title {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+/* 競合マップのスタイル */
+.competitor-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.competitor-category {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.competitor-category h4 {
+    color: #34495e;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.competitor-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.competitor-category li {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.competitor-note {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+/* 競争優位性のスタイル */
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.advantage-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-item h4 {
+    color: #a81a0c;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.advantage-item p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .competitor-map,
+    .advantage-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-competitor-analysis {
+        padding: 1rem;
+    }
+
+    .analysis-title {
+        font-size: 1.4rem;
+    }
+
+    .competitor-category h4 {
+        font-size: 1.2rem;
+    }
+
+    .competitor-category li {
+        font-size: 1rem;
+    }
+
+    .advantage-item h4 {
+        font-size: 1.1rem;
+    }
+
+    .advantage-item p {
+        font-size: 0.9rem;
+    }
+} 

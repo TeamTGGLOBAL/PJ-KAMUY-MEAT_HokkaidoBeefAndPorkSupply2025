@@ -1,0 +1,208 @@
+.slide-management-team {
+    padding: 2rem;
+}
+
+.management-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-overview {
+    margin-bottom: 2rem;
+}
+
+.overview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* TG GLOBALの強み */
+.company-strength {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.strength-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.strength-item h5 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.strength-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.strength-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.strength-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* マネジメントチーム */
+.management-team {
+    margin-top: 2rem;
+    border-left: 4px solid #a81a0c;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #a81a0c;
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.member-background {
+    list-style-type: none;
+    padding: 0;
+}
+
+.member-background li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.member-background li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* 組織体制 */
+.organization-structure {
+    margin-top: 2rem;
+    border-left: 4px solid #a81a0c;
+}
+
+.structure-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.structure-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.structure-item h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.structure-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.structure-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.structure-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .strength-grid,
+    .team-grid,
+    .structure-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .strength-grid,
+    .team-grid,
+    .structure-content {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-management-team {
+        padding: 1rem;
+    }
+
+    .company-strength,
+    .team-member,
+    .structure-item {
+        padding: 1rem;
+    }
+}
+
+.management-title {
+    color: #a81a0c;
+}
+
+.company-strengths {
+    border-left: 4px solid #a81a0c;
+} 

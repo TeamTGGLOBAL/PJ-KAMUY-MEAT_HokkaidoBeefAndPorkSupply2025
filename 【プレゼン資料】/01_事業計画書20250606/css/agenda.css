@@ -1,0 +1,117 @@
+.slide-agenda {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+.agenda-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.agenda-container h3 {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    /* border-left: 4px solid #e74c3c; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.agenda-container h3:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    transform: translateX(10px);
+    border-left-color: #fff;
+}
+
+.agenda-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-item h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.agenda-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.agenda-item li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 1rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.agenda-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .agenda-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-agenda {
+        padding: 1rem;
+    }
+
+    .agenda-container {
+        padding: 1.5rem;
+    }
+
+    .agenda-container h3 {
+        font-size: 1.6rem;
+        padding: 1.2rem 1.5rem;
+    }
+
+    .agenda-item {
+        padding: 1rem;
+    }
+
+    .agenda-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .agenda-item li {
+        font-size: 0.95rem;
+    }
+}
+
+.title-bar {
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background-color: #a81a0c;
+    margin-right: 18px;
+    vertical-align: middle;
+    border-radius: 0;
+    box-shadow: none;
+} 

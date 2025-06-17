@@ -1,0 +1,219 @@
+.slide-brand-product-strategy {
+    padding: 2rem;
+}
+
+.brand-strategy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ブランドコンセプト */
+.brand-concept {
+    margin-bottom: 3rem;
+}
+
+.concept-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.concept-main {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.concept-main h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.concept-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.brand-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.value-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.value-item h5 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.value-item p {
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* 製品ラインナップ */
+.product-lineup {
+    margin-bottom: 3rem;
+    border-left: 4px solid #108240;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.product-category {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-category h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.product-details h5 {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.product-details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.product-details li {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.product-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.product-details p {
+    color: #34495e;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* 品質保証システム */
+.quality-assurance {
+    margin-bottom: 2rem;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.quality-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quality-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.quality-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.quality-item li {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.quality-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .brand-values,
+    .quality-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-values,
+    .product-grid,
+    .quality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .concept-main h4 {
+        font-size: 1.5rem;
+    }
+
+    .product-category h4 {
+        font-size: 1.2rem;
+    }
+}
+
+.slide-brand-product-strategy .section-title {
+    color: 108240 !important;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 6px solid 108240 !important;
+    border-bottom: none !important;
+    background: none !important;
+    padding-left: 1.2rem;
+}
+
+.slide-brand-product-strategy .brand-title {
+    color: 108240 !important;
+}
+
+.slide-brand-product-strategy .brand-value,
+.slide-brand-product-strategy .quality-system {
+    border-left: 4px solid 108240 !important;
+}
+
+.slide-brand-product-strategy .title-bar {
+    background-color: #108240 !important;
+    width: 4px !important;
+    height: 40px !important;
+    margin-right: 18px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+} 

@@ -1,0 +1,101 @@
+/* 深層課題のスタイル */
+.slide-deep-issues {
+    padding: 2rem;
+}
+
+.issues-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.issue-challenge,
+.issue-solution {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.issue-title,
+.solution-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.issue-catchphrase {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #a81a0c;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.issue-points,
+.solution-points {
+    list-style-type: none;
+    padding: 0;
+}
+
+.issue-points li,
+.solution-points li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.issue-points li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+.solution-points li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 1024px) {
+    .issues-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .issue-title,
+    .solution-title {
+        font-size: 1.2rem;
+    }
+
+    .issue-catchphrase {
+        font-size: 1rem;
+    }
+}
+
+.deep-issues-challenge {
+    background-color: #fff6f4;
+    border-left: 6px solid #a81a0c;
+    color: #a81a0c;
+}
+.deep-issues-solution {
+    background-color: #f8f9fa;
+    border-left: 6px solid #a81a0c;
+    color: #a81a0c;
+}
+.deep-issues-title {
+    color: #a81a0c;
+}
+.deep-issues-catch {
+    color: #a81a0c;
+} 

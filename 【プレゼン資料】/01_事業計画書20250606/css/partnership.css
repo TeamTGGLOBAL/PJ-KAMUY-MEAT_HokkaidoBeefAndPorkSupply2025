@@ -1,0 +1,217 @@
+.slide-partnership {
+    padding: 2rem;
+}
+
+.partnership-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.partnership-overview {
+    margin-bottom: 2rem;
+}
+
+.partnership-overview p {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* パートナーシップカテゴリー */
+.partnership-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.partnership-category {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.partnership-category h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.partnership-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.partnership-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.partnership-details p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.partnership-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.partnership-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.partnership-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* パートナーシップのメリット */
+.partnership-benefits {
+    margin-bottom: 3rem;
+}
+
+.partnership-benefits h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.benefits-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.benefits-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.benefits-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.benefits-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.benefits-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* パートナーシップの開始 */
+.partnership-cta {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.partnership-cta h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.partnership-cta p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-details {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.cta-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.cta-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .benefits-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-partnership {
+        padding: 1rem;
+    }
+
+    .partnership-grid,
+    .benefits-content {
+        grid-template-columns: 1fr;
+    }
+
+    .partnership-category,
+    .partnership-cta {
+        padding: 1rem;
+    }
+
+    .partnership-item,
+    .benefits-item {
+        padding: 1rem;
+    }
+} 

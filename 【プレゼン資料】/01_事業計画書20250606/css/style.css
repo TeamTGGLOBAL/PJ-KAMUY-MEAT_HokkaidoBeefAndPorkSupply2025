@@ -3,10 +3,20 @@
 
 /* 各共通スライドパーツのCSS */
 @import url("01_title_slide.css");
-@import url("02_agenda_slide.css");
+/* @import url("02_agenda_slide.css"); */
 @import url("02_exective_sumary1.css");
-@import url("02_exective_sumary-1-1.css");
+/* @import url("02_exective_sumary-1-1.css"); */
 @import url("03_project_purpose.css");
+@import url("business-overview.css");
+@import url("business-objectives.css");
+@import url("deep-issues.css");
+@import url("target-customers.css");
+@import url("competitor-analysis.css");
+@import url("strategic-whitespace.css");
+@import url("taiwan-strategy.css");
+@import url("brand-product-strategy.css");
+@import url("supply-chain-strategy.css");
+@import url("marketing-sales-strategy.css");
 @import url("market-analysis1.css");
 @import url("market-analysis2-1.css");
 @import url("market-analysis3-1.css");
@@ -39,8 +49,23 @@
 @import url("conclusion2.css");
 @import url("conclusion3.css");
 @import url("conclusion4.css");
+@import url("management-team.css");
+@import url("implementation-phases.css");
+@import url("financial-plan.css");
+@import url("risk-management.css");
+@import url("conclusion.css");
+@import url("partnership.css");
 
-
+@import url('agenda.css');
+@import url('market-analysis.css');
+@import url('business-model.css');
+@import url('marketing-sales-strategy.css');
+@import url('management-team.css');
+@import url('implementation-phases.css');
+@import url('financial-plan.css');
+@import url('risk-management.css');
+@import url('conclusion.css');
+@import url('partnership.css');
 
 /* @import url("03_company_profile_slide.css");
 @import url("04_mission_vision_slide.css");

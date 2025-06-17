@@ -1,0 +1,291 @@
+.slide-marketing-sales-strategy {
+    padding: 2rem;
+}
+
+.marketing-strategy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* デジタル食育プログラム */
+.digital-food-education {
+    margin-bottom: 3rem;
+}
+
+.education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.education-overview {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.education-overview h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.education-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.education-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-item h5 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.feature-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-item li {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+/* ダイレクトアプローチ戦略 */
+.direct-approach {
+    margin-bottom: 3rem;
+}
+
+.approach-content {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.target-segments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.segment-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.segment-item h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.segment-details h5 {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.segment-details ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+}
+
+.segment-details li {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.segment-details li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+
+.segment-details p {
+    color: #34495e;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* ESG訴求戦略 */
+.esg-appeal {
+    margin-bottom: 2rem;
+}
+
+.esg-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.esg-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pillar-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pillar-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.pillar-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.pillar-item li {
+    color: #34495e;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pillar-item li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+}
+
+.esg-communication {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.esg-communication h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.communication-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.point-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.point-item h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.point-item p {
+    color: #34495e;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .education-features,
+    .esg-pillars,
+    .communication-points {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .education-features,
+    .target-segments,
+    .esg-pillars,
+    .communication-points {
+        grid-template-columns: 1fr;
+    }
+
+    .education-overview h4 {
+        font-size: 1.5rem;
+    }
+
+    .segment-item h4 {
+        font-size: 1.2rem;
+    }
+}
+
+.marketing-title {
+    color: #108240;
+}
+.marketing-section {
+    border-left: 4px solid #108240;
+}
+.sales-section {
+    border-left: 4px solid #108240;
+}
+.esg-section {
+    border-left: 4px solid #108240;
+}
+
+.slide-marketing-sales-strategy .section-title {
+    color: #108240 !important;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 6px solid #108240 !important;
+    border-bottom: none !important;
+    background: none !important;
+    padding-left: 1.2rem;
+} 
+
+.slide-marketing-sales-strategy .title-bar {
+    background-color: #108240 !important;
+    width: 4px !important;
+    height: 40px !important;
+    margin-right: 18px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}

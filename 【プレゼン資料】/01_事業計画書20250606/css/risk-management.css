@@ -1,0 +1,167 @@
+.slide-risk-management {
+    padding: 2rem;
+}
+
+.risk-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.risk-overview {
+    margin-bottom: 2rem;
+}
+
+.risk-overview p {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* リスクカテゴリー */
+.risk-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.risk-category {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.risk-category h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.risk-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.risk-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.risk-details p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.risk-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.risk-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.risk-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* リスク監視体制 */
+.risk-monitoring {
+    margin-top: 3rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.risk-monitoring h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.monitoring-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.monitoring-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.monitoring-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.monitoring-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.monitoring-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.monitoring-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .risk-grid,
+    .monitoring-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-risk-management {
+        padding: 1rem;
+    }
+
+    .risk-category,
+    .risk-monitoring {
+        padding: 1rem;
+    }
+
+    .risk-item,
+    .monitoring-item {
+        padding: 1rem;
+    }
+} 

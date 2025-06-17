@@ -1,0 +1,181 @@
+.slide-taiwan-strategy-overview {
+    padding: 2rem;
+}
+
+.strategy-overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-proposition {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.value-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.value-header h4 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    color: #34495e;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.value-elements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.value-element {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.value-element:hover {
+    transform: translateY(-5px);
+}
+
+.value-element h4 {
+    color: #108240;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #27ae60;
+}
+
+.value-element ul {
+    list-style: none;
+    padding: 0;
+}
+
+.value-element li {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.value-element li::before {
+    content: "•";
+    color: #108240;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+.value-impact {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.value-impact h4 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.impact-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.impact-item h5 {
+    color: #108240;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.impact-item p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+    .value-elements {
+        grid-template-columns: 1fr;
+    }
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-taiwan-strategy-overview {
+        padding: 1rem;
+    }
+    .value-header h4 {
+        font-size: 1.2rem;
+    }
+    .value-description {
+        font-size: 1rem;
+    }
+    .value-element h4 {
+        font-size: 1.1rem;
+    }
+    .value-element li {
+        font-size: 0.95rem;
+    }
+    .impact-item h5 {
+        font-size: 1rem;
+    }
+    .impact-item p {
+        font-size: 0.9rem;
+    }
+}
+
+.slide-taiwan-strategy-overview .section-title {
+    /* color: #108240; */
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 6px solid #108240;
+    border-bottom: 2px solid #108240;
+    padding-left: 1.2rem;
+    background: none;
+}
+
+.slide-taiwan-strategy-overview .value-header h4 {
+    color: #108240;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.slide-taiwan-strategy-overview .value-description {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.7;
+} 

@@ -1,0 +1,290 @@
+.slide-financial-plan {
+    padding: 2rem;
+}
+
+.financial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 初期投資計画 */
+.initial-investment {
+    margin-bottom: 3rem;
+    border-left: 4px solid #a81a0c;
+}
+
+.investment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.investment-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.investment-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.investment-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.investment-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.investment-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+.investment-amount {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #a81a0c;
+    text-align: right;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.total-investment {
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.total-investment h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.total-amount {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #a81a0c;
+}
+
+/* 売上・利益予測 */
+.financial-forecast {
+    margin-bottom: 3rem;
+}
+
+.forecast-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.forecast-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.forecast-details {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.forecast-year {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.forecast-year:last-child {
+    border-bottom: none;
+}
+
+.forecast-year .year {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.forecast-year .amount {
+    color: #a81a0c;
+    font-weight: 600;
+}
+
+.profit-breakdown {
+    margin-top: 2rem;
+}
+
+.breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.breakdown-item {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.breakdown-item h5 {
+    color: #2c3e50;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.breakdown-item .amount {
+    color: #a81a0c;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* 資金調達計画 */
+.funding-plan {
+    margin-top: 3rem;
+    border-left: 4px solid #a81a0c;
+}
+
+.funding-content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.funding-sources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.source-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.source-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.source-details p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.source-details .amount {
+    color: #a81a0c;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.repayment-plan {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.repayment-plan h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.repayment-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.repayment-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.repayment-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .investment-grid,
+    .forecast-overview,
+    .breakdown-grid,
+    .funding-sources {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-financial-plan {
+        padding: 1rem;
+    }
+
+    .investment-grid,
+    .forecast-overview,
+    .breakdown-grid,
+    .funding-sources {
+        grid-template-columns: 1fr;
+    }
+
+    .investment-item,
+    .forecast-content,
+    .source-item {
+        padding: 1rem;
+    }
+}
+
+.financial-title {
+    color: #a81a0c;
+}
+
+.sales-profit {
+    border-left: 4px solid #a81a0c;
+}
+
+.amount,
+.breakdown-item .amount,
+.source-details .amount {
+    color: #a81a0c;
+} 

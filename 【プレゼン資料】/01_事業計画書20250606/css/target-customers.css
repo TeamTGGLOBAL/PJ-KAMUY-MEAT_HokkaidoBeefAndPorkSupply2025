@@ -1,0 +1,102 @@
+.slide-target-customers {
+    padding: 2rem;
+}
+
+.target-customers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.customer-segment {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.segment-title {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.segment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.segment-profile,
+.segment-needs {
+    padding: 1rem;
+}
+
+.segment-profile h4,
+.segment-needs h4 {
+    color: #34495e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.segment-profile ul,
+.segment-needs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.segment-profile li,
+.segment-needs li {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.segment-profile li::before,
+.segment-needs li::before {
+    content: "•";
+    color: #a81a0c;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .segment-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-target-customers {
+        padding: 1rem;
+    }
+
+    .customer-segment {
+        padding: 1rem;
+    }
+
+    .segment-title {
+        font-size: 1.2rem;
+    }
+
+    .segment-profile h4,
+    .segment-needs h4 {
+        font-size: 1.1rem;
+    }
+
+    .segment-profile li,
+    .segment-needs li {
+        font-size: 0.9rem;
+    }
+} 

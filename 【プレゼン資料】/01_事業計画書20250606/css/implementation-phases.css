@@ -1,0 +1,190 @@
+.slide-implementation-phases {
+    padding: 2rem;
+}
+
+.implementation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* フェーズタイムライン */
+.phase-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.phase-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-left: 6px solid #a81a0c;
+}
+
+.phase-header {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #a81a0c;
+}
+
+.phase-number {
+    background-color: #a81a0c;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.phase-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.phase-period {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.phase-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.phase-objectives,
+.phase-milestones {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.phase-objectives h5,
+.phase-milestones h5 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.phase-objectives ul,
+.phase-milestones ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.phase-objectives li,
+.phase-milestones li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.phase-objectives li:before,
+.phase-milestones li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* 主要KPI */
+.key-metrics {
+    margin-top: 3rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.metric-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metric-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.metric-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.metric-item li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.metric-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .phase-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-implementation-phases {
+        padding: 1rem;
+    }
+
+    .phase-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .phase-item,
+    .metric-item {
+        padding: 1rem;
+    }
+}
+
+.phase-metrics {
+    color: #a81a0c;
+} 

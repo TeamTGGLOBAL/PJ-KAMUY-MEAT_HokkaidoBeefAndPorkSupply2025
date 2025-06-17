@@ -1,0 +1,127 @@
+.slide-strategic-whitespace {
+    padding: 2rem;
+}
+
+.whitespace-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.opportunity-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+}
+
+.opportunity-item h4 {
+    color: #a81a0c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.opportunity-description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.opportunity-points {
+    list-style: disc inside;
+    color: #555;
+    font-size: 0.98rem;
+    margin-left: 1rem;
+}
+
+.strategic-positioning {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+}
+
+.positioning-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.positioning-statement {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.positioning-points {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.positioning-point {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    padding: 1rem 1.2rem;
+    min-width: 220px;
+    flex: 1 1 220px;
+}
+
+.positioning-point h4 {
+    color: #a81a0c;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.positioning-point p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+    .opportunity-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .positioning-points {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-strategic-whitespace {
+        padding: 1rem;
+    }
+    .section-title {
+        font-size: 1.1rem;
+    }
+    .opportunity-item h4,
+    .positioning-point h4 {
+        font-size: 0.98rem;
+    }
+    .opportunity-description,
+    .positioning-point p {
+        font-size: 0.9rem;
+    }
+} 

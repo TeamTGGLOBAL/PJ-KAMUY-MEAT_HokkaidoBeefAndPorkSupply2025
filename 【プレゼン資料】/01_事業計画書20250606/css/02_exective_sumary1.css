@@ -7,22 +7,23 @@
 }
 
 .slide-executive-summary .common-title {
-    margin-bottom: 30px;
-    color: #2980b9;
+    /* margin-bottom: 30px;
+    color: #2c3e50;
     font-size: 2.2em;
     font-weight: 800;
     letter-spacing: -0.5px;
-    text-shadow: 2px 2px 4px rgba(41,128,185,0.08);
+    text-shadow: 2px 2px 4px rgba(41,128,185,0.08); */
 }
 
 .slide-executive-summary .title-bar {
     display: inline-block;
-    width: 6px;
-    height: 32px;
-    background: linear-gradient(to bottom, #2980b9, #27ae60);
-    margin-right: 15px;
+    width: 4px;
+    height: 40px;
+    background-color: #a81a0c;
+    margin-right: 18px;
     vertical-align: middle;
-    border-radius: 3px;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .slide-executive-summary .slide-content {
@@ -32,17 +33,17 @@
 }
 
 .summary-outline {
-    background: linear-gradient(90deg, #eaf6ff 0%, #eafff3 100%);
-    border-left: 6px solid #2980b9;
+    /* background: linear-gradient(90deg, #eaf6ff 0%, #eafff3 100%); */
+    border-left: 6px solid #a81a0c;
     border-radius: 0 12px 12px 0;
-    box-shadow: 0 2px 12px rgba(41,128,185,0.06);
+    box-shadow: 0 2px 12px rgba(168,26,12,0.06);
     padding: 1.5em 2em;
     margin-bottom: 2.5em;
     text-align: left;
 }
 
 .summary-outline-title {
-    color: #2980b9;
+    color: #a81a0c;
     font-size: 1.3em;
     font-weight: 700;
     margin-bottom: 0.5em;
@@ -56,9 +57,9 @@
 
 .summary-item {
     background: #fff;
-    border-left: 6px solid #27ae60;
+    border-left: 6px solid #a81a0c;
     border-radius: 0 12px 12px 0;
-    box-shadow: 0 2px 12px rgba(39,174,96,0.06);
+    box-shadow: 0 2px 12px rgba(168,26,12,0.06);
     padding: 1.2em 1.5em;
     margin-bottom: 1.3em;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -67,12 +68,12 @@
 
 .summary-item:hover {
     transform: translateY(-4px) scale(1.01);
-    box-shadow: 0 8px 24px rgba(39,174,96,0.12);
-    background: linear-gradient(90deg, #eafff3 0%, #eaf6ff 100%);
+    box-shadow: 0 8px 24px rgba(168,26,12,0.12);
+    background: linear-gradient(90deg, #ffeaea 0%, #fff6ea 100%);
 }
 
 .summary-title {
-    color: #27ae60;
+    color: #a81a0c;
     font-size: 1.15em;
     font-weight: 700;
     margin-bottom: 0.3em;

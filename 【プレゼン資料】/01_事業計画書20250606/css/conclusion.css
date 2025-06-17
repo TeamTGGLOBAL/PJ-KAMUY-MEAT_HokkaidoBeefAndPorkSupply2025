@@ -1,0 +1,204 @@
+.slide-conclusion {
+    padding: 2rem;
+}
+
+.conclusion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 成功への確信 */
+.success-confidence {
+    margin-bottom: 3rem;
+}
+
+.success-confidence h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.confidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.confidence-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.confidence-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.confidence-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.confidence-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.confidence-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* 台湾市場への貢献 */
+.market-contribution {
+    margin-bottom: 3rem;
+}
+
+.market-contribution h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.contribution-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contribution-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contribution-details p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.contribution-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contribution-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.contribution-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* 成功指標 */
+.success-metrics {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.success-metrics h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #a81a0c;
+}
+
+.metrics-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.metrics-item {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.metrics-item h4 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.metrics-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.metrics-item li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #2c3e50;
+}
+
+.metrics-item li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a81a0c;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 1024px) {
+    .confidence-grid,
+    .contribution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-conclusion {
+        padding: 1rem;
+    }
+
+    .confidence-grid,
+    .contribution-grid,
+    .metrics-content {
+        grid-template-columns: 1fr;
+    }
+
+    .confidence-item,
+    .contribution-item,
+    .metrics-item {
+        padding: 1rem;
+    }
+} 
