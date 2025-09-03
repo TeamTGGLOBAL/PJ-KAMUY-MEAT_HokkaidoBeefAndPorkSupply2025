@@ -184,19 +184,19 @@ function setupStaggeredAnimations() {
     });
 }
 
-// Parallax effect for hero background
-function setupParallax() {
-    const heroBackground = document.querySelector('.hero-background img');
-    
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        if (heroBackground) {
-            heroBackground.style.transform = `translateY(${rate}px)`;
-        }
-    });
-}
+// Parallax effect for hero background - DISABLED
+// function setupParallax() {
+//     const heroBackground = document.querySelector('.hero-background img');
+//     
+//     window.addEventListener('scroll', () => {
+//         const scrolled = window.pageYOffset;
+//         const rate = scrolled * -0.5;
+//         
+//         if (heroBackground) {
+//             heroBackground.style.transform = `translateY(${rate}px)`;
+//         }
+//     });
+// }
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupHeaderScroll();
     setupFixedCTA();
     setupStaggeredAnimations();
-    setupParallax();
+    // setupParallax(); // DISABLED - Background image movement
     
     // Initial animation trigger for elements in viewport
     setTimeout(() => {
