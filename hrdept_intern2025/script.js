@@ -16,7 +16,7 @@ function switchLanguage(lang) {
     document.querySelectorAll('[data-ja][data-vi]').forEach(element => {
         const text = element.getAttribute(`data-${lang}`);
         if (text) {
-            element.textContent = text;
+            element.innerHTML = text;
         }
     });
     
