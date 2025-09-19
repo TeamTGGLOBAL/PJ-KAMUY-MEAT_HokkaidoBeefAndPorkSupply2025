@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【インターン向け】北海道産食肉のベトナム向け輸出事業ガイド</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 5px;
+        }
+
+        .language-toggle button {
+            background: none;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .language-toggle button.active {
+            background: #005f2b;
+            color: white;
+        }
+
+        .language-toggle button:hover:not(.active) {
+            background: #f0f0f0;
+        }
+
+        h1 {
+            color: #005f2b;
+            border-bottom: 3px solid #005f2b;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        h2 {
+            color: #005f2b;
+            border-left: 5px solid #005f2b;
+            padding-left: 15px;
+            margin: 10px 0 15px 0;
+            font-size: 1.3em;
+        }
+
+        h3 {
+            color: #2c5530;
+            margin: 5px 0 5px 0;
+            font-size: 1.2em;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #005f2b;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .role-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .role-card h4 {
+            color: #005f2b;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #005f2b;
+        }
+
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #005f2b;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .content[data-lang="vi"] {
+            display: none;
+        }
+
+        .content[data-lang="ja"] {
+            display: block;
+        }
+
+        .phase-timeline {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .phase-item {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            border-top: 4px solid #005f2b;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .language-toggle {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            h1 {
+                margin: 20px 0 25px 0;
+                font-size: 1.5em;
+            }
+            
+            .phase-timeline {
+                flex-direction: column;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-toggle">
+        <button onclick="switchLanguage('ja')" id="btn-ja" class="active">日本語</button>
+        <button onclick="switchLanguage('vi')" id="btn-vi">Tiếng Việt</button>
+    </div>
+
+    <div class="container">
+        <!-- Japanese Content -->
+        <div class="content" data-lang="ja">
+            <h1>北海道産食肉のベトナム向け輸出事業ガイド</h1>
+            
+            <div class="intro">
+                <p>この資料は、私たちが進めている「北海道産食肉のベトナム向け輸出事業」について、インターンの皆さんに理解を深めてもらうためのガイドです。</p>
+            </div>
+
+            <div class="section">
+                <h2>1. 事業概要</h2>
+                <h3>なぜベトナムなのか？</h3>
+                <p>ベトナムは人口約9,800万人、GDP成長率6-7%を維持する成長市場です。都市部の富裕層拡大と日本食文化への関心の高まりにより、高品質な北海道産食肉への需要が急増しています。</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">9,800万人</div>
+                        <div class="stat-label">人口</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6-7%</div>
+                        <div class="stat-label">GDP成長率</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1,500店</div>
+                        <div class="stat-label">日本食レストラン</div>
+                    </div>
+                </div>
+
+                <h3>事業目標</h3>
+                <p>3年目に月間50頭の輸出、売上高5,000万円を目指し、ベトナム高級食肉市場での確固たる地位を築きます。</p>
+            </div>
+
+            <div class="section">
+                <h2>2. ベトナム市場の魅力</h2>
+                <h3>成長する消費市場</h3>
+                <ul>
+                    <li><strong>富裕層の拡大：</strong>年収5万ドル以上の富裕層が約50万人</li>
+                    <li><strong>日本食ブーム：</strong>日本食材輸入額が年率15%で成長</li>
+                    <li><strong>品質重視：</strong>安全で高品質な食材への需要が高まり</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>ターゲット顧客</h3>
+                    <p>ホーチミン・ハノイの富裕層、高級レストラン約500店、日本企業駐在員約2万人、日本留学経験者約10万人を主要ターゲットとします。</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>3. 私たちの戦略</h2>
+                <h3>段階的市場参入</h3>
+                <div class="phase-timeline">
+                    <div class="phase-item">
+                        <h4>Phase 1</h4>
+                        <p>ホーチミン富裕層向け高級レストラン</p>
+                    </div>
+                    <div class="phase-item">
+                        <h4>Phase 2</h4>
+                        <p>ハノイ市場への展開</p>
+                    </div>
+                    <div class="phase-item">
+                        <h4>Phase 3</h4>
+                        <p>中間層向け商品ライン追加</p>
+                    </div>
+                </div>
+
+                <h3>商品ラインナップ</h3>
+                <ul>
+                    <li><strong>プレミアムライン：</strong>和牛（150-200ドル/kg）</li>
+                    <li><strong>スタンダードライン：</strong>北海道産牛肉（80-120ドル/kg）</li>
+                    <li><strong>加工品ライン：</strong>ハム、ソーセージ（20-40ドル/kg）</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. インターンの役割</h2>
+                <p>皆さんは事業の重要な一員として、以下の役割で活躍していただきたいと考えています。</p>
+
+                <div class="role-card">
+                    <h4>マーケティングインターン（2名）</h4>
+                    <p><strong>業務内容：</strong>SNS運用、コンテンツ作成、市場調査補助</p>
+                    <p><strong>成長機会：</strong>デジタルマーケティングの実践的スキル、ベトナム市場の深い理解</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>営業サポートインターン（1名）</h4>
+                    <p><strong>業務内容：</strong>顧客データ管理、資料作成、イベントサポート</p>
+                    <p><strong>成長機会：</strong>ビジネススキル、データ分析能力、コミュニケーション力</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>翻訳・通訳インターン（1名）</h4>
+                    <p><strong>業務内容：</strong>日越翻訳、会議通訳、資料翻訳</p>
+                    <p><strong>成長機会：</strong>ビジネス翻訳スキル、国際ビジネス経験</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>期待していること</h3>
+                    <p>皆さんの感性やアイディアは、ベトナムの消費者に響く素晴らしいものかもしれません。気になることがあればいつでも相談してください。<br>そして、失敗を恐れず、積極的にチャレンジすることを期待しています。</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>5. 事業の数字</h2>
+                <h3>財務計画</h3>
+                <ul>
+                    <li><strong>初期投資：</strong>3,000万円</li>
+                    <li><strong>3年目売上目標：</strong>5,000万円</li>
+                    <li><strong>3年目営業利益：</strong>1,600万円</li>
+                    <li><strong>投資回収期間：</strong>3年</li>
+                </ul>
+
+                <h3>成功指標</h3>
+                <p>月間50頭の輸出達成、ベトナム高級食肉市場でのシェア5%獲得を目指します。</p>
+            </div>
+
+            <div class="section">
+                <h2>6. 将来展望</h2>
+                <h3>成長ステップ</h3>
+                <ul>
+                    <li><strong>1-3年目：</strong>ベトナム市場での基盤構築</li>
+                    <li><strong>4-5年目：</strong>タイ、マレーシア等への展開</li>
+                    <li><strong>6年目以降：</strong>東南アジア全域での事業展開</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>皆さんのキャリアパス</h3>
+                    <p>このプロジェクトの経験を通じて、国際ビジネスの基本スキルが身につくだけでなく、日々の業務の中で市場開拓のノウハウや実践的な問題解決能力を自然と身につけることができます。<br>また、将来的には海外拠点の責任者や新事業の立ち上げメンバーとして活躍する道が開けます。</p>
+                </div>
+
+                <h3>共に成長しましょう</h3>
+                <p>この事業は、皆さんの成長と会社の発展を同時に実現する絶好の機会です。ベトナム市場での成功を通じて、東南アジア全域に北海道の高品質な食を届ける未来を一緒に創造していきましょう。</p>
+            </div>
+        </div>
+
+        <!-- Vietnamese Content -->
+        <div class="content" data-lang="vi">
+            <h1>Hướng dẫn Dự án Xuất khẩu Thịt Hokkaido sang Việt Nam</h1>
+            
+            <div class="intro">
+                <p>Tài liệu này được tạo ra để giúp các bạn intern hiểu sâu hơn về "Dự án xuất khẩu thịt Hokkaido sang Việt Nam" mà chúng tôi đang triển khai. </p>
+            </div>
+
+            <div class="section">
+                <h2>1. Tổng quan Dự án</h2>
+                <h3>Tại sao chọn Việt Nam?</h3>
+                <p>Việt Nam là thị trường tăng trưởng với dân số khoảng 98 triệu người, tốc độ tăng trưởng GDP 6-7%. Sự mở rộng của tầng lớp giàu có ở đô thị và sự quan tâm ngày càng tăng đối với văn hóa ẩm thực Nhật Bản đã tạo ra nhu cầu cao cho thịt Hokkaido chất lượng cao.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">98 triệu</div>
+                        <div class="stat-label">Dân số</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6-7%</div>
+                        <div class="stat-label">Tăng trưởng GDP</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1,500 cửa hàng</div>
+                        <div class="stat-label">Nhà hàng Nhật</div>
+                    </div>
+                </div>
+
+                <h3>Mục tiêu Kinh doanh</h3>
+                <p>Mục tiêu xuất khẩu 50 con/tháng vào năm thứ 3, doanh thu 50 triệu yên, xây dựng vị thế vững chắc trong thị trường thịt cao cấp Việt Nam.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Sức hút của Thị trường Việt Nam</h2>
+                <h3>Thị trường tiêu dùng đang phát triển</h3>
+                <ul>
+                    <li><strong>Mở rộng tầng lớp giàu có:</strong>Khoảng 500,000 người có thu nhập trên 50,000 USD/năm</li>
+                    <li><strong>Boom ẩm thực Nhật:</strong>Giá trị nhập khẩu thực phẩm Nhật tăng 15%/năm</li>
+                    <li><strong>Chú trọng chất lượng:</strong>Nhu cầu cao đối với thực phẩm an toàn, chất lượng cao</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>Khách hàng Mục tiêu</h3>
+                    <p>Tầng lớp giàu có tại TP.HCM và Hà Nội, khoảng 500 nhà hàng cao cấp, khoảng 20,000 người Nhật làm việc tại Việt Nam, khoảng 100,000 người từng du học Nhật Bản là khách hàng mục tiêu chính.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>3. Chiến lược của chúng tôi</h2>
+                <h3>Thâm nhập thị trường theo từng giai đoạn</h3>
+                <div class="phase-timeline">
+                    <div class="phase-item">
+                        <h4>Giai đoạn 1</h4>
+                        <p>Nhà hàng cao cấp cho tầng lớp giàu có TP.HCM</p>
+                    </div>
+                    <div class="phase-item">
+                        <h4>Giai đoạn 2</h4>
+                        <p>Mở rộng sang thị trường Hà Nội</p>
+                    </div>
+                    <div class="phase-item">
+                        <h4>Giai đoạn 3</h4>
+                        <p>Bổ sung dòng sản phẩm cho tầng lớp trung lưu</p>
+                    </div>
+                </div>
+
+                <h3>Dòng sản phẩm</h3>
+                <ul>
+                    <li><strong>Dòng Premium:</strong>Thịt Wagyu (150-200 USD/kg)</li>
+                    <li><strong>Dòng Standard:</strong>Thịt bò Hokkaido (80-120 USD/kg)</li>
+                    <li><strong>Dòng chế biến:</strong>Jambon, xúc xích (20-40 USD/kg)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. Vai trò của Intern</h2>
+                <p>Các bạn sẽ hoạt động với vai trò là thành viên quan trọng của dự án trong các vị trí sau:</p>
+
+                <div class="role-card">
+                    <h4>Marketing Intern (2 người)</h4>
+                    <p><strong>Nội dung công việc:</strong>Vận hành SNS, tạo nội dung, hỗ trợ nghiên cứu thị trường</p>
+                    <p><strong>Cơ hội phát triển:</strong>Kỹ năng marketing số thực tế, hiểu biết sâu về thị trường Việt Nam</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Sales Support Intern (1 người)</h4>
+                    <p><strong>Nội dung công việc:</strong>Quản lý dữ liệu khách hàng, tạo tài liệu, hỗ trợ sự kiện</p>
+                    <p><strong>Cơ hội phát triển:</strong>Kỹ năng kinh doanh, khả năng phân tích dữ liệu, kỹ năng giao tiếp</p>
+                </div>
+
+                <div class="role-card">
+                    <h4>Translation/Interpretation Intern (1 người)</h4>
+                    <p><strong>Nội dung công việc:</strong>Dịch thuật Nhật-Việt, phiên dịch họp, dịch tài liệu</p>
+                    <p><strong>Cơ hội phát triển:</strong>Kỹ năng dịch thuật kinh doanh, kinh nghiệm kinh doanh quốc tế</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Điều chúng tôi mong đợi ở các bạn thực tập sinh</h3>
+                    <p>Với sự nhạy bén và những ý tưởng sáng tạo của các bạn, chúng ta có thể thu hút được người tiêu dùng Việt Nam. Có ý tưởng gì hay điều gì muốn trao đổi thì cứ chia sẻ với chúng tôi bất cứ lúc nào nhé! Chúng tôi mong các bạn đừng sợ thất bại mà hãy dũng cảm thử thách bản thân.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>5. Số liệu Dự án</h2>
+                <h3>Kế hoạch Tài chính</h3>
+                <ul>
+                    <li><strong>Đầu tư ban đầu:</strong>30 triệu yên</li>
+                    <li><strong>Mục tiêu doanh thu năm thứ 3:</strong>50 triệu yên</li>
+                    <li><strong>Lợi nhuận hoạt động năm thứ 3:</strong>16 triệu yên</li>
+                    <li><strong>Thời gian hoài vốn:</strong>3 năm</li>
+                </ul>
+
+                <h3>Chỉ số Thành công</h3>
+                <p>Mục tiêu đạt được xuất khẩu 50 con/tháng, chiếm 5% thị phần thịt cao cấp Việt Nam. </p>
+            </div>
+
+            <div class="section">
+                <h2>6. Triển vọng Tương lai</h2>
+                <h3>Các bước Phát triển</h3>
+                <ul>
+                    <li><strong>Năm 1-3:</strong>Xây dựng nền tảng tại thị trường Việt Nam</li>
+                    <li><strong>Năm 4-5:</strong>Mở rộng sang Thái Lan, Malaysia, v.v.</li>
+                    <li><strong>Từ năm 6:</strong>Triển khai kinh doanh toàn Đông Nam Á</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>Lộ trình Nghề nghiệp của các bạn</h3>
+                    <p>Thông qua kinh nghiệm của dự án này, bạn không chỉ có thể học được các kỹ năng cơ bản về kinh doanh quốc tế mà còn có thể tự nhiên học được các bí quyết mở rộng thị trường và khả năng giải quyết vấn đề thực tế trong công việc hàng ngày.<br>Ngoài ra, trong tương lai, bạn sẽ có cơ hội trở thành người chịu trách nhiệm tại các cơ sở ở nước ngoài hoặc thành viên khởi động dự án mới.</p>
+                </div>
+
+                <h3>Cùng nhau phát triển</h3>
+                <p>Dự án này là cơ hội tuyệt vời để đồng thời thực hiện sự phát triển của các bạn và sự phát triển của công ty. Hãy cùng nhau tạo ra tương lai mang thực phẩm chất lượng cao của Nhật Bản đến toàn bộ Đông Nam Á thông qua thành công tại thị trường Việt Nam.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            // Hide all content
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Show selected language content
+            const selectedContent = document.querySelector(`.content[data-lang="${lang}"]`);
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+
+            // Update button states
+            const buttons = document.querySelectorAll('.language-toggle button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${lang}`).classList.add('active');
+
+            // Save language preference
+            localStorage.setItem('preferredLanguage', lang);
+
+            // Update document language
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language.startsWith('vi') ? 'vi' : 'ja';
+            const initialLang = savedLang || browserLang;
+            
+            switchLanguage(initialLang);
+        });
+    </script>
+</body>
+</html>
